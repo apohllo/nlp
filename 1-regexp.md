@@ -4,7 +4,7 @@
 
 A dataset containing texts of Polish statutory law is available at [http://apohllo.pl/text/ustawy.tar.gz](http://apohllo.pl/text/ustawy.tar.gz).
 
-It contains texts of Polish bills as text, e.g.:
+It contains texts of Polish bills, e.g.:
 
 ```
 Tekst ustawy przyjęty przez Senat bez poprawek
