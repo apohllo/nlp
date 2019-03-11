@@ -32,9 +32,9 @@ na podstawie art. 5 ust. 7.”.
 The task is to:
 1. find all external references to regulations, e.g. **ustawie z dnia 
    4 marca 1994 r. o zakładowym funduszu świadczeń socjalnych (Dz. U.  z 2012 r. poz. 592)**
-1. find all internal references to regulations internal regulations, e.g. 
-   **art.  5 ust. 2**, **art. 5 ust. 7**, etc.
-1. count all occurrences of the word **ustawa** in all inflected forms (*ustawa*, *ustawie*, *ustawę*, etc.)
+1. find all internal references to regulations, e.g.  **art.  5 ust. 2**, **art. 5 ust. 7**, etc.
+1. count all occurrences of the word **ustawa** in all inflected forms (*ustawa*, *ustawie*, *ustawę*, etc.),
+   excluding other words with the same prefix (e.g. *ustawić*).
 
 
 ## Hints
