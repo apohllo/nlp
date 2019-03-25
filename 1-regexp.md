@@ -1,5 +1,8 @@
 # Regular expressions (aka regexps)
 
+The task is concentrated on using regular expressions for extracting basic information from textual data. 
+You will get more familiar with the features that are particularly important in natural language processing.
+
 ## Task
 
 A dataset containing texts of Polish statutory law is available at [http://apohllo.pl/text/ustawy.tar.gz](http://apohllo.pl/text/ustawy.tar.gz).

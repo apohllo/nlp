@@ -1,5 +1,8 @@
 # Lemmatization and full text search (FTS)
 
+The task is concentrated on using full text search engine (ElasticSearch) to perform basic search
+operations in a text corpus.
+
 ## Tasks
 
 1. Install ElasticSearch (ES).
