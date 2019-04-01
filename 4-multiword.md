@@ -6,7 +6,7 @@ The task shows two simple methods useful for identifying multiword expressions (
 
 1. Compute **bigram** counts in the corpora, ignoring bigrams which contain at least one token that is not a word
    (it contains characters other than letters). The text has to be properly normalized before the counts are computed:
-   it should be downcased and all punctuation should be removed. Given the sentence: "The quick borwn fox jumps over the
+   it should be downcased and all punctuation should be removed. Given the sentence: "The quick brown fox jumps over the
    lazy dog", the bigram counts are as follows:
    1. "the quick": 1
    1. "quick brown": 1
