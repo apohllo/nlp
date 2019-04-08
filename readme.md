@@ -5,4 +5,5 @@ The tasks accompanying the Natural Language Processing classes at AGH University
 1. [Regular expressions](1-regexp.md)
 1. [Full text search](2-fts.md)
 1. [Levenshtein distance](3-levenshtein.md)
-1. [Multiword identification](4-multiword.md)
+1. [Multiword expressions identification](4-multiword.md)
+1. [Morphosyntactic tagging](5-tagging.md)
