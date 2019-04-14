@@ -7,7 +7,7 @@ between the major grammatical categories, such as nouns and verbs.
 
 ## Tasks
 
-1. Download [docker image](https://hub.docker.com/r/djstrong/krnnt2) o KRNNT2. It includes the following tools:
+1. Download [docker image](https://hub.docker.com/r/djstrong/krnnt2) of KRNNT2. It includes the following tools:
    1. Morfeusz2 - morphological dictionary
    1. Corpus2 - corpus access library
    1. Toki - tokenizer for Polish
@@ -17,7 +17,7 @@ between the major grammatical categories, such as nouns and verbs.
 1. Using the tagged corpus compute bigram statistic for the tokens containing:
    1. lemmatized, downcased word
    1. morphosyntactic category of the word (noun, verb, etc.)
-1. Exclude bigram containing non-words (such as numbers, interpunction, etc.)
+1. Exclude bigram containing non-words (such as numbers, punctuation, etc.)
 1. For example: "Ala ma kota", which is tagged as:
    ```
    Ala	none
@@ -49,7 +49,7 @@ between the major grammatical categories, such as nouns and verbs.
 1. The full list of tags is available at [NKJP](http://nkjp.pl/poliqarp/help/ense2.html).
 1. A morphosyntactic tagger selects one of the interpretation of a word, taking into account its context.
    It can take the interpretation from a dictionary (like KRNNT), but it can also compute it dynamically (e.g. 
-   [COMBO](https://github.com/360er0/COMBO) is a tagger that does not need a morphosyntactic ananlyzer).
+   [COMBO](https://github.com/360er0/COMBO) is a tagger that does not need a morphosyntactic analyzer).
 1. The information provided by a tagger can be useful for many applications. You can selects words from particular
    grammatical category or you can submit the data to a downstream task such as text classification.
 
