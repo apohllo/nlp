@@ -6,7 +6,7 @@ The task concentrates on the usage of a WordNet for finding semantic relations b
 
 1. Read the [Wordnet API](http://api.slowosiec.clarin-pl.eu/docs/index.html)
 1. Get acquainted with [semantic relations](http://nlp.pwr.wroc.pl/narzedzia-i-zasoby/narzedzia/disaster/25-wiedza/81-relacje-w-slowosieci) in WordNet.
-1. Find all meaning of the _szkoda_ **noun** and display all their synonyms.
+1. Find all meanings of the _szkoda_ **noun** and display all their synonyms.
 1. Find closure of **hypernymy** relation for the first meaning of the _wypadek drogowy_ expression.
    Create diagram of the relations as a directed graph.
 1. Find direct **hyponyms** of _wypadek<sub>1</sub>_ noun.
@@ -42,4 +42,4 @@ The task concentrates on the usage of a WordNet for finding semantic relations b
    but it does not integrate with the Polish WordNet.
 1. The [pywnxml](https://github.com/ppke-nlpg/pywnxml) library allows for reading the Polish WordNet, but it lacks that
    measure.
-1. The contents of the Plish WordNet may also be accessed by a [web API](http://api.slowosiec.clarin-pl.eu/docs/index.html)
+1. The contents of the Polish WordNet may also be accessed by a [web API](http://api.slowosiec.clarin-pl.eu/docs/index.html)
