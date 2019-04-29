@@ -4,7 +4,7 @@ The tasks concentrates on the recent development in representing words as dense 
 
 ## Tasks
 
-1. Read the documentation of [fasttext](https://radimrehurek.com/gensim/models/word2vec.html) in Gensim library.
+1. Read the documentation of [word2vec](https://radimrehurek.com/gensim/models/word2vec.html) in Gensim library.
 1. Download polish word embeddings for word2vec from [Clarin](https://clarin-pl.eu/dspace/handle/11321/327).
 1. Using the downloaded model find the most similar word or expressions for the following expressions:
    1. sąd wysoki
