@@ -23,7 +23,7 @@ The tasks concentrates on the recent development in representing words as dense 
    1. pasażer - mężczyzna + kobieta
    1. samochód - droga + rzeka
 1. Using the [t-SNE](http://scikit-learn.org/stable/modules/generated/sklearn.manifold.TSNE.html) 
-   algorithm comput the projection of the random 1000 words with the following words highlighted
+   algorithm compute the projection of the random 1000 words with the following words highlighted
    (assuming they are available):
    1. szkoda
    1. strata
