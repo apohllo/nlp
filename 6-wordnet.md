@@ -2,7 +2,7 @@
 
 The task concentrates on the usage of a WordNet for finding semantic relations between words and expressions.
 
-## Task
+## Tasks
 
 1. Read the [Wordnet API](http://api.slowosiec.clarin-pl.eu/docs/index.html)
 1. Get acquainted with [semantic relations](http://nlp.pwr.wroc.pl/narzedzia-i-zasoby/narzedzia/disaster/25-wiedza/81-relacje-w-slowosieci) in WordNet.
