@@ -36,3 +36,5 @@ The task concentrates on content-based text the classification.
    Fasttext since they might be [wrong](https://github.com/facebookresearch/fastText/issues/261).
 1. [Flair](https://towardsdatascience.com/text-classification-with-state-of-the-art-nlp-library-flair-b541d7add21f) 
    is another library for text processing. Flair classification is based on a language model.
+1. [Speech and Language Processing](https://web.stanford.edu/~jurafsky/slp3/) by Jurafsky and Martin 
+   has a [chapter](https://web.stanford.edu/~jurafsky/slp3/4.pdf) devoted to the problem of classification.
