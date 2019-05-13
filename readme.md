@@ -10,3 +10,4 @@ The tasks accompanying the Natural Language Processing classes at AGH University
 1. [WordNet](6-wordnet.md)
 1. [Embeddings](7-embeddings.md)
 1. [Classification](8-classification.md)
+1. [Named entity recognition](9-ner.md)
