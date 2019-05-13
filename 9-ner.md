@@ -1,13 +1,13 @@
 # Named entity recognition
 
-The exercise shows how we may extract elements such as names of companies, countries and similar object from text.
+The exercise shows how we may extract elements such as names of companies, countries and similar objects from text.
 
 ## Tasks
 
-1. Randomly select 100 bills.
 1. Read the classification of [Named Entities](http://clarin-pl.eu/pliki/warsztaty/Wyklad3-inforex-liner2.pdf).
 1. Read the [API of NER](http://nlp.pwr.wroc.pl/redmine/projects/nlprest2/wiki) in [Clarin](http://ws.clarin-pl.eu/ner.shtml).
 1. Read the [documentation of CLL format](http://nlp.pwr.wroc.pl/redmine/projects/corpus2/wiki/CCL_format).
+1. Randomly select 100 bills.
 1. Recognize the named entities in the documents using the `n82` model.
 1. Plot the frequency of the recognized classes:
    1. fine-grained classification histogram (classes such as `nam_fac_bridge`, `nam_liv_animal`).
@@ -22,7 +22,7 @@ The exercise shows how we may extract elements such as names of companies, count
    scope and classifying them to a predefined type. The larger the number of types, the more difficult the problem is.
 1. Named entities are usually proper names and temporal expressions. They usually convey the most important information
    in text.
-1. IOB format is usually used to tag names entities. The names come from the types of tokens (_in_, _out_, _beginning_).
+1. IOB format is typically used to tag names entities. The name (IOB) comes from the types of tokens (_in_, _out_, _beginning_).
    The following example shows how the format works:
    ```
    W            O
