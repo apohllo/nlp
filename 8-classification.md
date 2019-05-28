@@ -32,7 +32,7 @@ The task concentrates on content-based text the classification.
 
 1. Application of SVM classifier with TF•IDF is described in 
    [David Batista](http://www.davidsbatista.net/blog/2017/04/01/document_classification/) blog post.
-1. [Fasttext](https://fasttext.cc/) is a popular basline classifier. Don't report the Precision/Recall/F1 provided by
+1. [Fasttext](https://fasttext.cc/docs/en/supervised-tutorial.html) is a popular basline classifier. Don't report the Precision/Recall/F1 provided by
    Fasttext since they might be [wrong](https://github.com/facebookresearch/fastText/issues/261).
 1. [Flair](https://towardsdatascience.com/text-classification-with-state-of-the-art-nlp-library-flair-b541d7add21f) 
    is another library for text processing. Flair classification is based on a language model.
