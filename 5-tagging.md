@@ -31,7 +31,7 @@ between the major grammatical categories, such as nouns and verbs.
    ```
    the algorithm should return the following bigrams: `ala:subst mieć:fin` and `mieć:fin kot:subst`.
 1. Compute LLR statistic for this dataset.
-1. Select top 50 results including noun at the first position and noun or adjective at the second position.
+1. Select top 50 results including **noun at the first position and noun or adjective at the second position**.
 
 ## Hints
 
