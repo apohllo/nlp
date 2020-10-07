@@ -58,7 +58,7 @@ Task objectives:
   Yet you can use `regex` library (`pip install regex`), which has much more features.
 * Regular expressions can include positive and negative lookahead and lookbehind constructions, e.g.
   * *positive lookahead* - `(\w+)(?= has a cat)` will match string `Ann has a cat`, but it will match `Ann` only.
-  * *negative lookbehind* - `(?!<New )(York)`, will match `Yorkshire` but not `New York`.
+  * *negative lookbehind* - `(?<!New )(York)`, will match `Yorkshire` but not `New York`.
 * `\b` matches a word boarder. Regexp `fish` will match `jellyfish`, but `\bfish\b` will only match `fish`.
   In the case of Python you should use either `'\\bfish\\b'` or `r'\bfish\b'`.
 * `\b` is dependent on what is understood by "word". For instance in Ruby polish diacritics are not treated as parts of
