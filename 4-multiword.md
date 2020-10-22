@@ -4,7 +4,7 @@ The task shows two simple methods useful for identifying multiword expressions (
 
 ## Tasks
 
-1. Use SpaCy [tokenizer API](https://spacy.io/api/tokenizer) to tokenize the text from the corpus.
+1. Use SpaCy [tokenizer API](https://spacy.io/api/tokenizer) to tokenize the text from the law corpus.
 1. Compute **bigram** counts of downcased tokens.  Given the sentence: "The quick brown fox jumps over the
    lazy dog.", the bigram counts are as follows:
    1. "the quick": 1
