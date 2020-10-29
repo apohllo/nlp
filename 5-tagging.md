@@ -13,7 +13,7 @@ between the major grammatical categories, such as nouns and verbs.
    1. Toki - tokenizer for Polish
    1. Maca - morphosyntactic analyzer
    1. KRNNT - Polish tagger
-1. Use the tool to tag and lemmatize the corpus with the bills.
+1. Use the tool to tag and lemmatize the law corpus.
 1. Using the tagged corpus compute bigram statistic for the tokens containing:
    1. lemmatized, downcased word
    1. morphosyntactic **category** of the word (`subst`, `fin`, `adj`, etc.)
