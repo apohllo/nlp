@@ -12,12 +12,12 @@ between the major grammatical categories, such as nouns and verbs.
    1. Corpus2 - corpus access library
    1. Toki - tokenizer for Polish
    1. Maca - morphosyntactic analyzer
-   1. rknnt - Polish tagger
+   1. KRNNT - Polish tagger
 1. Use the tool to tag and lemmatize the corpus with the bills.
 1. Using the tagged corpus compute bigram statistic for the tokens containing:
    1. lemmatized, downcased word
-   1. morphosyntactic category of the word (noun, verb, etc.)
-1. Exclude bigram containing non-words (such as numbers, punctuation, etc.)
+   1. morphosyntactic **category** of the word (`subst`, `fin`, `adj`, etc.)
+1. Discard bigrams containing characters other than letters. Make sure that you discard the invalid entries after computing the bigram counts.
 1. For example: "Ala ma kota", which is tagged as:
    ```
    Ala	none
@@ -31,7 +31,14 @@ between the major grammatical categories, such as nouns and verbs.
    ```
    the algorithm should return the following bigrams: `ala:subst mieć:fin` and `mieć:fin kot:subst`.
 1. Compute LLR statistic for this dataset.
-1. Select top 50 results including **noun at the first position and noun or adjective at the second position**.
+1. Partition the entries based on the syntactic categories of the words, i.e. all bigrams having the form of 
+   `w1:adj` `w2:subst` should be placed in one partition (the order of the words may not be changed).
+1. Select the 10 largest partitions (partitions with the larges number of entries).
+1. Use the computed LLR measure to select 5 bigrams for each of the largest categories.
+1. Using the results from the previous step answer the following questions:
+   1. What types of bigrams have been found?
+   1. Which of the category-pairs indicate valuable multiword expressions? Do they have anything in common?
+   1. Which signal: LLR score or syntactic category is more useful for determining genuine multiword expressions?
 
 ## Hints
 
@@ -52,4 +59,7 @@ between the major grammatical categories, such as nouns and verbs.
    [COMBO](https://github.com/360er0/COMBO) is a tagger that does not need a morphosyntactic analyzer).
 1. The information provided by a tagger can be useful for many applications. You can selects words from particular
    grammatical category or you can submit the data to a downstream task such as text classification.
-
+1. More sophisticated algorithms for multiword expressions identification, such as 
+   [AutoPhrase](https://github.com/shangjingbo1226/AutoPhrase) take into account more features including:
+   morphosyntactic tags, expression contexts, etc. and use data from e.g. Wikipedia, to automatically identify
+   high-quality multiword expressions and use them to train MWE classifiers.

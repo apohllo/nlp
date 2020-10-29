@@ -20,7 +20,7 @@ operations in a text corpus.
 1. Load the data to the ES index.
 1. Determine the number of legislative acts containing the word **ustawa** (in any form).
 1. Determine the number of legislative acts containing the words **kodeks postępowania cywilnego** 
-   in the specified order, but in an any inflection form.
+   in the specified order, but in any inflection form.
 1. Determine the number of legislative acts containing the words **wchodzi w życie** 
    (in any form) allowing for up to 2 additional words in the searched phrase.
 1. Determine the 10 documents that are the most relevant for the phrase **konstytucja**.
