@@ -22,7 +22,8 @@ The task introduces the Levenshtein distance - a measure that is useful in tasks
    dictionary will be appreciated.)
 1. Load Morfologik to ElasticSearch (one document for each form) and use fuzzy matching to obtain the possible
    corrections of the 30 words with 5 occurrences that do not belong to the dictionary.
-1. Compare the results. Draw conclusions regarding:
+1. Compare the results of your algorithm and output of ES. 
+1. Draw conclusions regarding:
    * the distribution of words in the corpus,
    * the number of true misspellings vs. the number of unknown words,
    * the performance of your method compared to ElasitcSearch,
