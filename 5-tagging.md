@@ -39,6 +39,8 @@ between the major grammatical categories, such as nouns and verbs.
    1. What types of bigrams have been found?
    1. Which of the category-pairs indicate valuable multiword expressions? Do they have anything in common?
    1. Which signal: LLR score or syntactic category is more useful for determining genuine multiword expressions?
+   1. Can you describe a different use-case where the morphosyntactic category is useful for resolving a real-world
+      problem?
 
 ## Hints
 
