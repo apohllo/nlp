@@ -17,7 +17,8 @@ The task shows two simple methods useful for identifying multiword expressions (
 1. Use [pointwise mutual information](https://en.wikipedia.org/wiki/Pointwise_mutual_information) to compute the measure 
    for all pairs of words. 
 1. Sort the word pairs according to that measure in the descending order and determine top 10 entries.
-1. Filter bigrams with number of occurrences lower than 5. Determine top 10 entries for the filtered dataset.
+1. Filter bigrams with number of occurrences lower than 5. Determine top 10 entries for the remaining dataset (>=5
+   occurrences).
 1. Use [log likelihood ratio](http://tdunning.blogspot.com/2008/03/surprise-and-coincidence.html) (LLR) to compute the measure
    for all pairs of words.
 1. Sort the word pairs according to that measure in the descending order and display top 10 entries.
