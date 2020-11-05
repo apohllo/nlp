@@ -22,6 +22,10 @@ The task concentrates on the usage of a WordNet for finding semantic relations b
    1. szkoda<sub>2</sub> - wypadek<sub>1</sub>,
    1. kolizja<sub>2</sub> - szkoda majątkowa<sub>1</sub>,
    1. nieszczęście<sub>2</sub> - katastrofa budowlana<sub>1</sub>.
+1. Questions/problems:
+   1. What is the necessary step to use the knowlege from dictionaries such as WordNet?
+   1. Assess the value of WordNet as a resource for representing the sense of sentences (not words in isolation).
+   1. Discuss the problmes comming from using structured knowledge resources such as WordNet.
 
 
 ## Hints
