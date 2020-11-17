@@ -47,3 +47,4 @@ The task concentrates on the usage of a WordNet for finding semantic relations b
 1. The [pywnxml](https://github.com/ppke-nlpg/pywnxml) library allows for reading the Polish WordNet, but it lacks that
    measure.
 1. The contents of the Polish WordNet may also be accessed by a [web API](http://api.slowosiec.clarin-pl.eu/docs/index.html)
+1. The [statistics](http://plwordnet.pwr.wroc.pl/wordnet/stats) of the Polish WordNet with a shorter list of relations..
