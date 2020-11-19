@@ -1,40 +1,37 @@
 # Text classification
 
-The task concentrates on content-based text the classification.
+The task concentrates on content-based text classification.
 
 
 ## Tasks
 
-1. Divide the set of bills into two exclusive sets:
-   1. the set of bills amending other bills (their title starts with `o zmianie ustawy`),
-   1. the set of bills not amending other bills.
-1. Change the contents of the bill by removing the date of publication and the title (so the words `o zmianie ustawy`
-   are removed).
-1. Split the sets of documents into the following groups by randomly selecting the documents:
-   1. 60% training
-   1. 20% validation
-   1. 20% testing
-1. Do not change these groups during the following experiments.
-1. Prepare the following variants of the documents:
-   1. full text of the document
-   1. randomly selected 10% of the lines of the document
-   1. randomly selected 10 lines of the document
-   1. randomly selected 1 line of the document
-1. Train the following classifiers on the documents:
-   1. SVM with TF•IDF
-   1. Fasttext
-   1. Flair with Polish language model
-1. Report Precision, Recall and F1 for each variant of the experiment (12 variants altogether).
-
+1. Get acquainted with the data of the [Polish Cyberbullying detection dataset](https://github.com/ptaszynski/cyberbullying-Polish). 
+   Pay special attention to the distribution of the positive and negative examples in the first task as well as
+   distribution of the classes in the second task.
+1. Train the following classifiers on the training sets (for the task 1 and the task 2):
+   1. Bayesian classifier with TF * IDF weighting.
+   1. Fasttext text classifier
+   1. Transformer classifier (take into account that a number of experiments should be performed for this model).
+1. Compare the results of classification on the test set. Select the appropriate measuers (form accuracy, F1,
+   macro/micro F1, MCC) to compare the results.
+1. Select 1 TP, 1 TN, 1 FP and 1 FN from your predictions (for the best classifier) and compare the decisions of each
+   classifier on these examples using [SHAP](https://github.com/slundberg/shap).
+1. Answer the following questions:
+   1. Which of the classifiers works the best for the task 1 and the task 2.
+   1. Did you achieve results comparable with the results of [PolEval Task](http://2019.poleval.pl/index.php/results/)?
+   1. Did you achieve results comparabie with the [Klej leaderboard](https://klejbenchmark.com/leaderboard/)?
+   1. Describe strengths and weaknesses of each of the compared algorithms.
+   1. Do you think comparison of raw performance values on a single task is enough to assess the value of a given
+      algorithm/model?
+   1. Did SHAP show that the models use valuable featurs/words when performing their decision?
 
 ## Hints
 
-
-1. Application of SVM classifier with TF•IDF is described in 
-   [David Batista](http://www.davidsbatista.net/blog/2017/04/01/document_classification/) blog post.
+1. You can use [Google colab](https://colab.research.google.com/notebooks/intro.ipynb) to perform experiments which
+   require access to GPU or TPU.
 1. [Fasttext](https://fasttext.cc/docs/en/supervised-tutorial.html) is a popular basline classifier. Don't report the Precision/Recall/F1 provided by
    Fasttext since they might be [wrong](https://github.com/facebookresearch/fastText/issues/261).
-1. [Flair](https://towardsdatascience.com/text-classification-with-state-of-the-art-nlp-library-flair-b541d7add21f) 
-   is another library for text processing. Flair classification is based on a language model.
+1. [Huggingsface Transformers](https://github.com/huggingface/transformers) library is a popular library for performing NLP tasks base on the transformer
+   architecture.
 1. [Speech and Language Processing](https://web.stanford.edu/~jurafsky/slp3/) by Jurafsky and Martin 
    has a [chapter](https://web.stanford.edu/~jurafsky/slp3/4.pdf) devoted to the problem of classification.
