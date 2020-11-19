@@ -44,9 +44,10 @@ The task concentrates on the usage of a WordNet for finding semantic relations b
    a lexeme. Lexemes belonging to a particular synset are called synonyms.
 1. The [webapi of WordNet](http://api.slowosiec.clarin-pl.eu/docs/index.html) might be used in the following way (I use
    [jq](https://www.npmjs.com/package/node-jq) library to post-prcess the JSON response):
-   * `curl -X GET http://api.slowosiec.clarin-pl.eu/plwordnet-api/senses/search\?lemma\=gol | jq '.content[] | .id'` - get all ids of senses of a given lexeme (gol in this example)
-   * `curl -X GET http://api.slowosiec.clarin-pl.eu/plwordnet-api/senses/1944/synset | jq .id` - get id of the owning synset (for the first sense of gol)
-   * `curl -X GET http://api.slowosiec.clarin-pl.eu/plwordnet-api/synsets/65421/relations | jq '.[] | .synsetTo.id'` - get ids of all related synsets. The query ignores the type of relation and half of the results just returns the ID of the source synset.
+   * `curl -X GET http://api.slowosiec.clarin-pl.eu/plwordnet-api/senses/search\?lemma\=gol | jq '.content[] | .id'` - get all ids of senses of a given lexeme (**gol** in this example)
+   * `curl -X GET http://api.slowosiec.clarin-pl.eu/plwordnet-api/senses/1944/synset | jq .id` - get id of the owning synset (for the first sense of **gol**)
+   * `curl -X GET http://api.slowosiec.clarin-pl.eu/plwordnet-api/synsets/65421/relations | jq '.[] | .synsetTo.id'` - get ids of all related synsets. 
+     The query ignores the type of relation and half of the results just returns the ID of the source synset.
    * `curl -X GET http://api.slowosiec.clarin-pl.eu/plwordnet-api/synsets/65421/relations | jq '.[] | .relation.name'` - return the name of the relation corresponding the ID above.
    * `curl -X GET http://api.slowosiec.clarin-pl.eu/plwordnet-api/synsets/285651/senses | jq '.[] | .lemma.word'` - get lemmas of a given synset.
 1. The [NLTK](https://www.nltk.org/) library has an [implementation](http://www.nltk.org/howto/wordnet.html) of Leacock-Chodorow measure, 
