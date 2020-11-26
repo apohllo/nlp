@@ -7,14 +7,31 @@ The exercise shows how we may extract elements such as names of companies, count
 1. Read the classification of [Named Entities](http://clarin-pl.eu/pliki/warsztaty/Wyklad3-inforex-liner2.pdf).
 1. Read the [API of NER](http://nlp.pwr.wroc.pl/redmine/projects/nlprest2/wiki) in [Clarin](http://ws.clarin-pl.eu/ner.shtml).
 1. Read the [documentation of CLL format](http://nlp.pwr.wroc.pl/redmine/projects/corpus2/wiki/CCL_format).
-1. Randomly select 100 bills.
-1. Recognize the named entities in the documents using the `n82` model.
-1. Plot the frequency of the recognized classes:
-   1. fine-grained classification histogram (classes such as `nam_fac_bridge`, `nam_liv_animal`).
-   1. coarse-grained classification histogram (classes such as `nam_adj`, `nam_eve`, `nam_fac`).
-1. Display 50 most frequent Named Entities including their count and fine-grained type.
+1. Sort bills according to their size and take top 50 (largest) bills.
+1. Use the lemmatized and sentence split documents (from ex. 5) to identify the expressions that consist of consecutive
+   words starting with a capital letter (you will have to look at the inflected form of the word to check its
+   capitalization) that do not occupy the first position in a sentence. E.g. the sentence:
+   ```
+   Wczoraj w Krakowie miało miejsce spotaknie prezydentów Polski i Stanów Zjednoczonych.
+   ```
+   should yield the following entries: `Kraków`, `Polska`, `Stan Zjednoczony`.
+1. Compute the frequency of each identified expression and print 50 results with the largest number of occurrences.
+1. Apply the NER algorithm to identify the named entities in the same set of documents (not lemmatized) using the `n82` model.
+1. Plot the frequency (histogram) of the coares-grained classes (e.g. nam_adj`, `nam_eve`, `nam_fac`).
 1. Display 10 most frequent Named Entities for each coarse-grained type.
-1. Discuss the results of the extraction.
+1. Display 50 most frequent Named Entities including their count and fine-grained type.
+1. Answer the following questions:
+   1. Which of the method (counting expressions with capital letters vs. NER) worked better for the task concerned with
+      identification of the proper names?
+   1. What are the drawbacks of the method based on capital letters?
+   1. What are the drawbacks of the method based on NER?
+   1. Which of the coarse-grained NER groups has the best and which has the worst results? Try to justify this
+      observation.
+   1. Do you think NER is sufficient for identifying different occurrences of the same entity (i.e. consider "USA" and
+      "Stany Zjednoczone" and "Stany Zjednoczone Ameryki Północnej") ? If not, can you suggest an algorithm or a tool that
+      would be able to group such names together?
+   1. Can you think of a real world problem that would benefit the most from application of Named Entity Recognition
+      algorithm?
 
 ## Hints
 

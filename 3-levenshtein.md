@@ -9,18 +9,19 @@ The task introduces the Levenshtein distance - a measure that is useful in tasks
 1. Aggregate the result to obtain one global frequency list.
 1. Reject all entries that are shorter than 2 characters or contain non-letter characters (make sure to include Polish
    diacritics).
-1. Make a plot in a logarithmic scale:
+1. Make a plot in a logarithmic scale (for X and Y):
    1. X-axis should contain the **rank** of a term, meaning the first rank belongs to the term with the highest number of
       occurrences; the terms with the same number of occurrences should be ordered by their name,
    2. Y-axis should contain the **number of occurrences** of the term with given rank.
-1. Download [polimorfologik.zip](https://github.com/morfologik/polimorfologik/releases/download/2.1/polimorfologik-2.1.zip) dictionary
-   and use it to find all words that do not appear in that dictionary.
+1. Install [Morfeusz](http://morfeusz.sgjp.pl/download/) (Binding dla Pythona) and use it to find all words that do not
+   appear in that dictionary.
 1. Find 30 words with the highest ranks that do not belong to the dictionary.
-1. Find 30 words with 5 occurrences that do not belong to the dictionary.
+1. Find 30 random words (i.e. shuffle the words) with 5 occurrences that do not belong to the dictionary.
 1. Use Levenshtein distance and the frequency list, to determine the most probable correction of the words from the
    second list. (You don't have to apply the distance directly. Any method that is more efficient than scanning the
    dictionary will be appreciated.)
-1. Load Morfologik to ElasticSearch (one document for each form) and use fuzzy matching to obtain the possible
+1. Load [SGJP dictionary](http://morfeusz.sgjp.pl/download/) (Słownik SGJP dane tekstowe) to ElasticSearch (one document for each form) 
+   and use fuzzy matching to obtain the possible
    corrections of the 30 words with 5 occurrences that do not belong to the dictionary.
 1. Compare the results of your algorithm and output of ES. 
 1. Draw conclusions regarding:
