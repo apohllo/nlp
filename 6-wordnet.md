@@ -23,9 +23,9 @@ The task concentrates on the usage of a WordNet for finding semantic relations b
    1. kolizja<sub>2</sub> - szkoda majątkowa<sub>1</sub>,
    1. nieszczęście<sub>2</sub> - katastrofa budowlana<sub>1</sub>.
 1. Questions/problems:
-   1. What is the necessary step to use the knowlege from dictionaries such as WordNet?
+   1. What is the necessary step to use the knowledge from dictionaries such as WordNet?
    1. Assess the value of WordNet as a resource for representing the sense of sentences (not words in isolation).
-   1. Discuss the problmes comming from using structured knowledge resources such as WordNet.
+   1. Discuss the problems coming from using structured knowledge resources such as WordNet.
 
 
 ## Hints
@@ -60,4 +60,4 @@ The task concentrates on the usage of a WordNet for finding semantic relations b
 1. The [pywnxml](https://github.com/ppke-nlpg/pywnxml) library allows for reading the Polish WordNet, but it lacks that
    measure.
 1. The contents of the Polish WordNet may also be accessed by a [web API](http://api.slowosiec.clarin-pl.eu/docs/index.html)
-1. The [statistics](http://plwordnet.pwr.wroc.pl/wordnet/stats) of the Polish WordNet with a shorter list of relations..
+1. The [statistics](http://plwordnet.pwr.wroc.pl/wordnet/stats) of the Polish WordNet with a shorter list of relations.
