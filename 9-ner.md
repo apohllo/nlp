@@ -17,7 +17,7 @@ The exercise shows how we may extract elements such as names of companies, count
    should yield the following entries: `Kraków`, `Polska`, `Stan Zjednoczony`.
 1. Compute the frequency of each identified expression and print 50 results with the largest number of occurrences.
 1. Apply the NER algorithm to identify the named entities in the same set of documents (not lemmatized) using the `n82` model.
-1. Plot the frequency (histogram) of the coares-grained classes (e.g. nam_adj`, `nam_eve`, `nam_fac`).
+1. Plot the frequency (histogram) of the coares-grained classes (e.g. `nam_adj`, `nam_eve`, `nam_fac`).
 1. Display 10 most frequent Named Entities for each coarse-grained type.
 1. Display 50 most frequent Named Entities including their count and fine-grained type.
 1. Answer the following questions:
