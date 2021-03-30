@@ -33,7 +33,7 @@ between the major grammatical categories, such as nouns and verbs.
 1. Compute LLR statistic for this dataset.
 1. Partition the entries based on the syntactic categories of the words, i.e. all bigrams having the form of 
    `w1:adj` `w2:subst` should be placed in one partition (the order of the words may not be changed).
-1. Select the 10 largest partitions (partitions with the larges number of entries).
+1. Select the 10 largest partitions (partitions with the largest number of entries).
 1. Use the computed LLR measure to select 5 bigrams for each of the largest categories.
 1. Using the results from the previous step answer the following questions:
    1. What types of bigrams have been found?
@@ -56,12 +56,12 @@ between the major grammatical categories, such as nouns and verbs.
    1. The second interpretation shows that the word can be an adjective in singular, in nominative, in feminine.
    1. The third interpretation shows that the word can be an adjective in singular, in vocative, in feminine.
 1. The full list of tags is available at [NKJP](http://nkjp.pl/poliqarp/help/ense2.html).
-1. A morphosyntactic tagger selects one of the interpretation of a word, taking into account its context.
+1. A morphosyntactic tagger selects one of the interpretations of a word, taking into account its context.
    It can take the interpretation from a dictionary (like KRNNT), but it can also compute it dynamically (e.g. 
    [COMBO](https://github.com/360er0/COMBO) is a tagger that does not need a morphosyntactic analyzer).
-1. The information provided by a tagger can be useful for many applications. You can selects words from particular
+1. The information provided by a tagger can be useful for many applications. You can select words from particular
    grammatical category or you can submit the data to a downstream task such as text classification.
 1. More sophisticated algorithms for multiword expressions identification, such as 
-   [AutoPhrase](https://github.com/shangjingbo1226/AutoPhrase) take into account more features including:
+   [AutoPhrase](https://github.com/shangjingbo1226/AutoPhrase) take into account more features, including:
    morphosyntactic tags, expression contexts, etc. and use data from e.g. Wikipedia, to automatically identify
    high-quality multiword expressions and use them to train MWE classifiers.
