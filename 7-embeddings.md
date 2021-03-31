@@ -1,6 +1,6 @@
 # Word embeddings
 
-The tasks concentrates on the recent development in representing words as dense vectors in highly dimiensional spaces.
+The task concentrates on the recent development in representing words as dense vectors in highly dimensional spaces.
 
 ## Tasks
 
@@ -29,7 +29,7 @@ The tasks concentrates on the recent development in representing words as dense 
     1. pilot + kobieta - mężczyzna
     1. lekarz + kobieta - mężczyzna
     1. nauczycielka + mężczyzna - kobieta
-    1. przedszkolanka + mężczyzna - 'kobieta
+    1. przedszkolanka + mężczyzna - kobieta
     1. samochód + rzeka - droga
 1. Using the [t-SNE](http://scikit-learn.org/stable/modules/generated/sklearn.manifold.TSNE.html) 
    algorithm compute the projection of the random 1000 words with the following words highlighted
@@ -50,10 +50,10 @@ The tasks concentrates on the recent development in representing words as dense 
    1. lekarka
 1. Answer the following questions:
    1. Compare results for all experiments with respect to the employed models (100 and 300-d)?
-   1. Compare results for singe words and MWEs.
-   1. How the results for MWEs could be improved?
-   1. Are the results for albegraic operations biased?
-   1. According to t-SNE: do representations of similar word cluster together?
+   1. Compare results for single words and MWEs.
+   1. How could the results for MWEs be improved?
+   1. Are the results for algebraic operations biased?
+   1. According to t-SNE: do representations of similar words cluster together?
 
 ## Hints
 

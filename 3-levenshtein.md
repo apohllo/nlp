@@ -27,7 +27,7 @@ The task introduces the Levenshtein distance - a measure that is useful in tasks
 1. Draw conclusions regarding:
    * the distribution of words in the corpus,
    * the number of true misspellings vs. the number of unknown words,
-   * the performance of your method compared to ElasitcSearch,
+   * the performance of your method compared to ElasticSearch,
    * the results provided by your method compared to ElasticSearch,
    * the validity of the obtained corrections.
 
@@ -44,8 +44,8 @@ The task introduces the Levenshtein distance - a measure that is useful in tasks
 1. The frequency list may be used to select the most popular word with given distance, if there are many candidate
    corrections.
 1. Usually the correction algorithm does not use the edit distance directly, since it would require to compare the
-   invalid word with all words in the dictionary. The algorithms work in the opposite way - the generate candidate words
-   that are 1 or 2 edits away from the invalid word (cf. P. Norvigs [article](https://norvig.com/spell-correct.html)
+   invalid word with all words in the dictionary. The algorithms work in the opposite way - they generate candidate words
+   that are 1 or 2 edits away from the invalid word (cf. P. Norvig's [article](https://norvig.com/spell-correct.html)
    for the details). A different approach is to use [Levenshtein automaton](https://norvig.com/spell-correct.html) for
    finding the corrections effectively.
 1. ElasticSearch has a [fuzziness](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-fuzzy-query.html)

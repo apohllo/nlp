@@ -34,12 +34,12 @@ The task shows two simple methods useful for identifying multiword expressions (
 
 ## Hints
 
-1. An n-gram is a sequence containing n words. A unigram is a sequence containing one word,
-   a bigram is a sequence containing two consecutive words, etc.
+1. An n-gram is a sequence containing n tokens. A unigram is a sequence containing one token,
+   a bigram is a sequence containing two consecutive tokens, etc.
 1. *Pointwise mutual information* is used to identify correlated events. It's based on the assumption that the events
    follow normal distribution and that there is a minimal number of occurrences of the words. These assumptions hold
    only for a subset of words.
-1. Log likelihood ratio test doesn't have these assumption. This makes it better suited for the task.
+1. Log likelihood ratio test doesn't have these assumptions. This makes it better suited for the task.
 1. There is [LLR implementation](https://github.com/tdunning/python-llr) in Python, implemented by Ted Dunning - the
    author of the important work [Accurate Methods for the Statistics of Surprise and
    Coincidence](https://aclweb.org/anthology/J93-1003) which introduces LLR to NLP.
@@ -49,5 +49,5 @@ The task shows two simple methods useful for identifying multiword expressions (
    [Gensim](https://radimrehurek.com/gensim/models/phrases.html) also allows
    to compute these values.
 1. ElasticSearch has a [shingle token filter](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-shingle-tokenfilter.html) 
-   which can be used to build the n-grams as well.
-1. BTW "multiword expressions" is a mutliword expression itself ;-)
+   which can be used to build the n-grams as well ("shingle" is not a typo, it's another name for n-gram).
+1. BTW "multiword expression" is a multiword expression itself ;-)

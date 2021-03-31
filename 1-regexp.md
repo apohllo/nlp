@@ -57,12 +57,12 @@ Task objectives:
 * Not all regular expressions engines support Unicode classes, e.g. `re` from Python does not.
   Yet you can use `regex` library (`pip install regex`), which has much more features.
 * Regular expressions can include positive and negative lookahead and lookbehind constructions, e.g.
-  * *positive lookahead* - `(\w+)(?= has a cat)` will match string `Ann has a cat`, but it will match `Ann` only.
-  * *negative lookbehind* - `(?<!New )(York)`, will match `Yorkshire` but not `New York`.
-* `\b` matches a word boarder. Regexp `fish` will match `jellyfish`, but `\bfish\b` will only match `fish`.
+  * *positive lookahead* - `(\w+)(?= has a cat)` will match in the string `Ann has a cat`, but it will match `Ann` only.
+  * *negative lookbehind* - `(?<!New )(York)`, will match `York` in `Yorkshire` but not in `New York`.
+* `\b` matches a word border. Regexp `fish` will match in `jellyfish`, but `\bfish\b` will only match `fish`.
   In the case of Python you should use either `'\\bfish\\b'` or `r'\bfish\b'`.
 * `\b` is dependent on what is understood by "word". For instance in Ruby polish diacritics are not treated as parts of
-  a word, thus `\bpsu\b` will match both `psu` and `psuć`, since `ć` is a non-word letter in Ruby.
+  a word, thus `\bpsu\b` will match both `psu` and `psuć`, since `ć` is a non-word character in Ruby.
 * Some languages, e.g. Ruby, support regexp match operator as well as regexp literals (`=~`, /fish/ respectively 
   in the case of Ruby and Perl). Notably Python does not support either.
 * You should be very careful when copying regexps from Internet - different languages and even different versions of the
