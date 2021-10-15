@@ -5,7 +5,7 @@ You will get more familiar with the regexp features that are particularly import
 
 ## Task
 
-A dataset containing texts of Polish statutory law is available at [http://apohllo.pl/text/ustawy.tar.gz](http://apohllo.pl/text/ustawy.tar.gz).
+A dataset containing texts of Polish statutory law is available at [https://apohllo.pl/text/ustawy.tar.gz](https://apohllo.pl/text/ustawy.tar.gz).
 
 It contains texts of Polish bills, e.g.:
 
