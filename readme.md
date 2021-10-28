@@ -10,7 +10,6 @@ The tasks accompanying the Natural Language Processing classes at AGH University
 2. [Language modelling](10-lm.md)
 3. [Classification](8-classification.md)
 4. [Named entity recognition](9-ner.md)
-5. Semantic Similarity
-6. Neural Search
+5. Semantic Similarity + Neural Search 
 7. Question Answering
 
