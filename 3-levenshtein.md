@@ -4,10 +4,11 @@ The task introduces the Levenshtein distance - a measure that is useful in tasks
 
 ## Tasks
 
-1. Use SpaCy [tokenizer API](https://spacy.io/api/tokenizer) to tokenize the text from the law corpus.
-1. Compute **frequency list** for each of the processed files.
-1. Aggregate the result to obtain one global frequency list.
-1. Reject all entries that are shorter than 2 characters or contain non-letter characters (make sure to include Polish
+1. Make sure the texts in the corpus does not contain HTML code.
+2. Use SpaCy [tokenizer API](https://spacy.io/api/tokenizer) to tokenize the text from the cleaned law corpus.
+3. Compute **frequency list** for each of the processed files.
+4. Aggregate the result to obtain one global frequency list.
+5. Reject all entries that are shorter than 2 characters or contain non-letter characters (make sure to include Polish
    diacritics).
 1. Make a plot in a logarithmic scale (for X and Y):
    1. X-axis should contain the **rank** of a term, meaning the first rank belongs to the term with the highest number of
