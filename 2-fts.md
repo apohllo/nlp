@@ -19,8 +19,8 @@ operations in a text corpus.
 1. Define an ES index for storing the contents of the legislative acts.
 1. Load the data to the ES index.
 1. Determine the number of legislative acts containing the word **ustawa** (in any form).
-2. Determine the number of occurrences of the word **ustawa** (in any form).
-3. Determine the number of occurrences of the word **ustaw** (in any form).
+2. Determine the number of occurrences of the word **ustawa** by searching for this particular form, including the other inflectional forms.
+3. Determine the number of occurrences of the word **ustaw** by searching for this particular form, including the other inflectional forms.
 4. Determine the number of legislative acts containing the words **kodeks postępowania cywilnego** 
    in the specified order, but in any inflection form.
 1. Determine the number of legislative acts containing the words **wchodzi w życie** 
