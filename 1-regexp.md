@@ -39,7 +39,7 @@ Task objectives:
    * removal of a unit (e.g. **w art. 10 ust. 1 pkt 8 skreśla się**),
    * change of a unit (e.g. **art. 5 otrzymuje brzmienie**).
 1. Note that other types of changes, e.g. **po wyrazach "na dofinansowanie" dodaje się wyrazy " , z zastrzeżeniem art. 21a,"**, must not be included in the result.
-1. Plot results from point 1 showing how the percentage of amendments of a given type changed in the consecutive years.
+1. Plot results from point 1 showing how the **percentage** of amendments of a given type changed in the consecutive years.
 1. Compute the total number of occurrences of the word **ustawa** in any inflectional form (*ustawa*, *ustawie*, *ustawę*, etc.)
    and all spelling forms (*ustawa*, *Ustawa*, *USTAWA*), excluding other words with the same prefix (e.g. *ustawić*).
 1. Compute the total number of occurrences of the same word (same conditions), followed by **z dnia** expression.
