@@ -18,8 +18,8 @@ The task introduces the Levenshtein distance - a measure that is useful in tasks
    appear in that dictionary.
 1. Find 30 words with the highest ranks that do not belong to the dictionary.
 1. Find 30 random words (i.e. shuffle the words) with 5 occurrences that do not belong to the dictionary.
-1. Use Levenshtein distance and the frequency list, to determine the most probable correction of the words from the
-   second list. (You don't have to apply the distance directly. Any method that is more efficient than scanning the
+1. Use Levenshtein distance and the frequency list, to determine the most probable correction of the words from
+   lists defined in points 8 and 9. (**Note**: You don't have to apply the distance directly. Any method that is more efficient than scanning the
    dictionary will be appreciated.)
 1. Load [SGJP dictionary](http://morfeusz.sgjp.pl/download/) (Słownik SGJP dane tekstowe) to ElasticSearch (one document for each form) 
    and use fuzzy matching to obtain the possible
