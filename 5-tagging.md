@@ -13,7 +13,7 @@ between the major grammatical categories, such as nouns and verbs.
    1. Toki - tokenizer for Polish
    1. Maca - morphosyntactic analyzer
    1. KRNNT - Polish tagger
-1. As an alternative you can use Tagger interfaces in [Clarin-Pl]:https://ws.clarin-pl.eu/tager.shtml
+1. As an alternative you can use Tagger interfaces in [Clarin-Pl](https://ws.clarin-pl.eu/tager.shtml)
 2. Use the tool to tag and lemmatize the law corpus.
 3. Using the tagged corpus compute bigram statistic for the tokens containing:
    1. lemmatized, downcased word
