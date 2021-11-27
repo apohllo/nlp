@@ -19,7 +19,7 @@ between the major grammatical categories, such as nouns and verbs.
    1. lemmatized, downcased word
    1. morphosyntactic **category** of the word (`subst`, `fin`, `adj`, etc.)
 4. Discard bigrams containing characters other than letters. Make sure that you discard the invalid entries after computing the bigram counts.
-5. For example: "Ala ma kota", which is tagged as:
+5. For example: "Ala ma kota.", which is tagged as:
    ```
    Ala	none
            Ala	subst:sg:nom:f	disamb
