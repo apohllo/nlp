@@ -35,3 +35,4 @@ The task concentrates on content-based text classification.
    architecture.
 1. [Speech and Language Processing](https://web.stanford.edu/~jurafsky/slp3/) by Jurafsky and Martin 
    has a [chapter](https://web.stanford.edu/~jurafsky/slp3/4.pdf) devoted to the problem of classification.
+1. [Huggingface course](https://huggingface.co/course/chapter1/1) is a great resource related to all necessary knowledge related to the most up-to-date NLP model training.
