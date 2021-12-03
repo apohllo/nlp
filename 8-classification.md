@@ -15,7 +15,7 @@ The task concentrates on content-based text classification.
 1. Compare the results of classification on the test set. Select the appropriate measures (from accuracy, F1,
    macro/micro F1, MCC) to compare the results.
 1. Select 1 TP, 1 TN, 1 FP and 1 FN from your predictions (for the best classifier) and compare the decisions of each
-   classifier on these examples using [SHAP](https://github.com/slundberg/shap).
+   classifier on these examples using [LIME](https://github.com/marcotcr/lime).
 1. Answer the following questions:
    1. Which of the classifiers works the best for the task 1 and the task 2.
    1. Did you achieve results comparable with the results of [PolEval Task](http://2019.poleval.pl/index.php/results/)?
