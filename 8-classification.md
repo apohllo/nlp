@@ -5,7 +5,7 @@ The task concentrates on content-based text classification.
 
 ## Tasks
 
-1. Get acquainted with the data of the [Polish Cyberbullying detection dataset](http://2019.poleval.pl/index.php/tasks/task6). 
+1. Get acquainted with the data of the [Polish Cyberbullying detection dataset](https://huggingface.co/datasets/poleval2019_cyberbullying). 
    Pay special attention to the distribution of the positive and negative examples in the first task as well as
    distribution of the classes in the second task.
 1. Train the following classifiers on the training sets (for the task 1 and the task 2):
