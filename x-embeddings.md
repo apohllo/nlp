@@ -67,3 +67,4 @@ The task concentrates on the recent development in representing words as dense v
 1. The vectors provided by the algorithm reflect some of the semantic and syntactic features of the represented
    words. E.e. the following equation should work in the vector space:
    `w2v("król") - w2v("mężczyzna") + w2v("kobieta") = w2v("królowa")`
+1. Try to compare WordNet with word2vec. What are the streanghts and weaknesses of each of the representations?

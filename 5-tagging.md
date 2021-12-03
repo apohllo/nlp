@@ -34,7 +34,7 @@ between the major grammatical categories, such as nouns and verbs.
 1. Compute LLR statistic for this dataset.
 1. Partition the entries based on the syntactic categories of the words, i.e. all bigrams having the form of 
    `w1:adj` `w2:subst` should be placed in one partition (the order of the words may not be changed).
-1. Select the 10 largest partitions (partitions with the largest number of entries).
+1. Select the 10 largest partitions (partitions with the larges number of distinct entries).
 1. Use the computed LLR measure to select 5 bigrams for each of the largest categories.
 1. Using the results from the previous step answer the following questions:
    1. What types of bigrams have been found?
