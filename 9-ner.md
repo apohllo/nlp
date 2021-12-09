@@ -20,7 +20,9 @@ The exercise shows how we may extract elements such as names of companies, count
 1. Plot the frequency (histogram) of the coarse-grained classes (e.g. `nam_adj`, `nam_eve`, `nam_fac`).
 1. Display 10 most frequent Named Entities for each coarse-grained type.
 1. Display 50 most frequent Named Entities including their count and fine-grained type.
-1. Answer the following questions:
+2. Display 5 sentences containing at least 2 recognized named entities with different types. Highlight the recognized spans with color.
+   (For demo application [Streamlit] might be useful for displaying NER results).
+4. Answer the following questions:
    1. Which of the method (counting expressions with capital letters vs. NER) worked better for the task concerned with
       identification of the proper names?
    1. What are the drawbacks of the method based on capital letters?
