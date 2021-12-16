@@ -52,10 +52,10 @@ bi-encoder neural model).
 9. Compare the performance of the data stores using the following metrics: Pr@1, Rc@1, Pr@3, Rc@3.
 10. Make a pull request to the repository: https://github.com/apohllo/simple-legal-questions-pl containing the file with the questions.
 10. Answer the following questions:
-   1. Which of the document stores performs better? Take into account the different metrics enumerated in the previous
-      point.
-   2. Which of the document stores is faster?
-   3. Try to determine the other pros and cons of using sparse and dense document retrieval models.
+    1. Which of the document stores performs better? Take into account the different metrics enumerated in the previous
+       point.
+    2. Which of the document stores is faster?
+    3. Try to determine the other pros and cons of using sparse and dense document retrieval models.
    
 
 ## Hints
