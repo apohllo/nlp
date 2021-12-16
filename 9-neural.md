@@ -10,10 +10,12 @@ bi-encoder neural model).
 1. Read the documentation of the [document store](https://haystack.deepset.ai/components/v1.0.0/document-store) and
    the [document retriever](https://haystack.deepset.ai/components/v1.0.0/retriever) in the 
    [Haystack framework](https://haystack.deepset.ai/overview/intro).
-2. Configure one document store based on ElasticSearch and another document store based on Faiss supported by DPR:
+1. Install Haystack framework. You may need to used [this fork](https://github.com/apohllo/haystack/tree/use-auto-tokenizer-by-default) 
+   to get support for Polish QA models.
+3. Configure one document store based on ElasticSearch and another document store based on Faiss supported by DPR:
    1. The ES store should properly process Polish documents.
    2. For DPR you should use [Polish question] and [Polish context] encoders.
-3. Pre-process all documents from the set of Polish bills (used in the previous exercises), byt splitting them into
+4. Pre-process all documents from the set of Polish bills (used in the previous exercises), byt splitting them into
    individual articles: 
    1. You can apply a simple heuristic that searches for `Art.` at the beginnign of the processed line, to identify the passages. 
    2. Assing identifiers to the passages by combining the file name with the article id.
