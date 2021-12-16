@@ -14,9 +14,9 @@ bi-encoder neural model).
    to get support for Polish QA models.
 3. Configure one document store based on ElasticSearch and another document store based on Faiss supported by DPR:
    1. The ES store should properly process Polish documents.
-   2. For DPR you should use [Polish question](https://huggingface.co/enelpol/czywiesz-question) **enelpol/czywiesz-question** and 
-      [Polish context](https://huggingface.co/enelpol/czywiesz-context) **enelpol/czywiesz-context** encoders.
-4. Pre-process all documents from the set of Polish bills (used in the previous exercises), byt splitting them into
+   2. For DPR you should use [enelpol/czywiesz-question](https://huggingface.co/enelpol/czywiesz-question) and 
+      [enelpol/czywiesz-context](https://huggingface.co/enelpol/czywiesz-context) encoders.
+4. Pre-process all documents from the set of Polish bills (used in the previous exercises), but splitting them into
    individual articles: 
    1. You can apply a simple heuristic that searches for `Art.` at the beginnign of the processed line, to identify the passages. 
    2. Assing identifiers to the passages by combining the file name with the article id.
