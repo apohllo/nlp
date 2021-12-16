@@ -8,7 +8,8 @@ bi-encoder neural model).
 ## Tasks
 
 1. Read the documentation of the [document store](https://haystack.deepset.ai/components/v1.0.0/document-store) and
-   the [document retriever](https://haystack.deepset.ai/components/v1.0.0/retriever) in haystack framework.
+   the [document retriever](https://haystack.deepset.ai/components/v1.0.0/retriever) in the 
+   [Haystack framework](https://haystack.deepset.ai/overview/intro).
 2. Configure one document store based on ElasticSearch and another document store based on Faiss supported by DPR:
    1. The ES store should properly process Polish documents.
    2. For DPR you should use [Polish question] and [Polish context] encoders.
@@ -72,3 +73,6 @@ bi-encoder neural model).
 5. Using dense vector representation requires computing the dense vectors for all passages in the dataset. 
    These vectors might be stored in document stores such as [FAISS](https://github.com/facebookresearch/faiss) for faster retrieval, 
    especially when the dataset is very large (does not fit into memory).
+6. Pr@n and Rc@n meen *precision at n* and *recall at n*. They are computed by retrieving `n` top documents and
+   computing the metrics in a regular way. E.g. if among 3 retrieved documents there are 2 valid documents out of 5, 
+   Pr@3 is 2/3 = 66% and Rc@3 is 2/5 = 40%.
