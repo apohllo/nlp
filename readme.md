@@ -9,7 +9,7 @@ The tasks accompanying the Natural Language Processing classes at AGH University
 1. [Morphosyntactic tagging](5-tagging.md)
 2. [Language modelling](6-lm.md)
 3. [Classification](7-classification.md)
-4. [Named entity recognition](9-ner.md)
-5. Semantic Similarity + Neural Search 
-7. Question Answering
+4. [Named entity recognition](8-ner.md)
+5. [Neural Search](9-neural.md)
+7. [Question Answering](10-qa.md)
 
