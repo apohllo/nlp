@@ -14,10 +14,10 @@ bi-encoder neural model).
    2. For DPR you should use [Polish question] and [Polish context] encoders.
 3. Pre-process all documents from the set of Polish bills (used in the previous exercises), byt splitting them into
    individual articles: 
-   1. You can apply a simple heuristic that searches for `Art.` at the beginnign of the processed line, to identify the apricle passage. 
+   1. You can apply a simple heuristic that searches for `Art.` at the beginnign of the processed line, to identify the passages. 
    2. Assing identifiers to the passages by combining the file name with the article id.
-   3. There might be repeated identifiers, since we use a heuristic. You should ignore that problem -- just make sure
-      that the you load only one passage with a specific id.
+   3. There might be repeated identifiers, since we use a heuristic. You should ignore that problem - just make sure
+      that you load only one passage with a specific id.
 3. Load the passages from previous point to the document stores described in point 2.
 4. Randomly select 100 passages that do not describe an amendment (you can manually reject the amendments). 
 5. Invent 30 factual questions based directly on 30 distinct passages that you have selected. The larger number of
@@ -39,14 +39,18 @@ bi-encoder neural model).
    1. Each passage must have up to one question in the dataset.
    2. The questions, the ids of the passages and the content of the passages have to be stored in CSV file, with the
       following format: `passage_id`, `question`, `passage`.
+   3. The question have to be factual, i.e. the passage need to include all information necessary to answer it. This
+      means that general knowlege or knowledge encoded in different aricles or bills (even though there is a pointer in 
+      the text to such regulations) must not be required to answer the question.
 8. Use the set of questions defined in the previous point to assess the performance of the document stores:
-   1. Make a query based on the question.
+   1. Make a query based on the question to each store.
    2. Return 3 top document for the questions.
    3. Assess the validity of the returned passages. It is possible that more than one passage contains the answer to the
       question.
    4. If there are passages containg the answer to the given question, append those passages (with the question, passage
       id and passage content) to the reference file.
 9. Compare the performance of the data stores using the following metrics: Pr@1, Rc@1, Pr@3, Rc@3.
+10. Make a pull request to the repository: https://github.com/apohllo/simple-legal-questions-pl containing the file with the questions.
 10. Answer the following questions:
    1. Which of the document stores performs better? Take into account the different metrics enumerated in the previous
       point.
