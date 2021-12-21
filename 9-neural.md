@@ -16,7 +16,7 @@ bi-encoder neural model).
    1. The ES store should properly process Polish documents.
    2. For DPR you should use [enelpol/czywiesz-question](https://huggingface.co/enelpol/czywiesz-question) and 
       [enelpol/czywiesz-context](https://huggingface.co/enelpol/czywiesz-context) encoders.
-      **Warning** make sure to used models uploaded past 21st of December 2021, since the first model version included a bug.
+   3. **Warning:** Make sure to used models uploaded past 21st of December 2021, since the first model version included a bug.
 4. Pre-process all documents from the set of Polish bills (used in the previous exercises), but splitting them into
    individual articles: 
    1. You can apply a simple heuristic that searches for `Art.` at the beginnign of the processed line, to identify the passages. 
