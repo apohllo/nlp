@@ -46,7 +46,13 @@ bi-encoder neural model).
       following format: `passage_id`, `question`, `passage`.
    3. The question have to be factual, i.e. the passage need to include all information necessary to answer it. This
       means that general knowlege or knowledge encoded in different aricles or bills (even though there is a pointer in 
-      the text to such regulations) must not be required to answer the question.
+      the text to such regulations) must not be required to answer the question. Yet if one paragraph (point, letter, tired) 
+      of the article relates to the other paragraph (point, letter, tired), such question is ok. In fact the first 
+      question above is based on the reference between the second and the first paragraph.
+   4. For binary questions (yes/no): make sure the number of questions with **yes** answer is similar to the questions
+      with **no** answer.
+   5. The question should be related to the law. Questions asking for the lenght of the passage, the sum of digits in the passage
+      or the number of capital leters in the passage are not law-related.
 8. Use the set of questions defined in the previous point to assess the performance of the document stores:
    1. Make a query based on the question to each store.
    2. Return 3 top document for the questions.
@@ -70,9 +76,9 @@ bi-encoder neural model).
    usage is based on sparse document model.
 3. Dense document retrieval is based on dense vector models provided by neural networks. These dense vectors might be 
    generated directly, by e.g. avaraging the vectors of word embeddings belonging to a given text fragment. Yet such
-   models performance is inferior to spare models.
+   models performance is inferior to sparse models.
 4. More sophisticated models are trained directly on the document retrieval task. E.g. [DPR](https://arxiv.org/abs/2004.04906)
-   uses a bi-encoder model that has a separate neural network for encoding the question and for encoding the passage.
+   uses a bi-encoder architecture that has a separate neural network for encoding the question and for encoding the passage.
    These netowrks are trained to maximise the dot-product of the vectors produced by each of the networks.
 5. Using dense vector representation requires computing the dense vectors for all passages in the dataset. 
    These vectors might be stored in document stores such as [FAISS](https://github.com/facebookresearch/faiss) for faster retrieval, 
