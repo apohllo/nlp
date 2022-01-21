@@ -23,7 +23,7 @@ The task concentrates on content-based text classification.
    1. Describe strengths and weaknesses of each of the compared algorithms.
    1. Do you think comparison of raw performance values on a single task is enough to assess the value of a given
       algorithm/model?
-   1. Did SHAP show that the models use valuable features/words when performing their decision?
+   1. Did LIME show that the models use valuable features/words when performing their decision?
 
 ## Hints
 
