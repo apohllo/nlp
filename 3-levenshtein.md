@@ -4,7 +4,7 @@ The task introduces the Levenshtein distance - a measure that is useful in tasks
 
 ## Tasks
 
-1. Use the corpus from exercise no. 1.
+1. Use the corpus from exercise no. 1 or any Polish corpus of comparable size.
 2. Make sure the texts in the corpus does not contain HTML code.
 3. Use SpaCy [tokenizer API](https://spacy.io/api/tokenizer) to tokenize the text from the cleaned law corpus.
 4. Compute **frequency list** for each of the processed files.
