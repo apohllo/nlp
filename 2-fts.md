@@ -60,4 +60,4 @@ operations in a text corpus.
    take very pragmatic approach - for a given inflected form all possible base forms are put in the index.
    Even though it's not valid from the linguistics' point of view, it works well in practice.
 1. [Term vector API](https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-termvectors.html) allows to retrieve useful 
-   statistics of a given term in a particular document or in the whold document collection.
+   statistics of a given term in a particular document or in the whole document collection.
