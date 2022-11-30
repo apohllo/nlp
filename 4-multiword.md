@@ -19,7 +19,7 @@ The task shows two simple methods useful for identifying multiword expressions (
 1. Sort the word pairs according to that measure in the descending order and determine top 10 entries.
 1. Filter bigrams with number of occurrences lower than 5. Determine top 10 entries for the remaining dataset (>=5
    occurrences).
-1. Use [KRNNT](https://hub.docker.com/r/djstrong/krnnt2) or Clarin-PL API(https://ws.clarin-pl.eu/tager.shtml) to tag and lemmatize the corpus.
+1. Use [KRNNT](https://hub.docker.com/r/djstrong/krnnt2) or [Clarin-PL API](https://ws.clarin-pl.eu/tager.shtml) to tag and lemmatize the corpus. Note: Clarin allows to upload a ZIP file with the whole corpus and process it as one request.
 1. Using the tagged corpus compute bigram statistic for the tokens containing:
    a. lemmatized, downcased word
    b. morphosyntactic category of the word (subst, fin, adj, etc.)
