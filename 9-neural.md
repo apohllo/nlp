@@ -7,8 +7,8 @@ bi-encoder neural model).
 
 ## Tasks
 
-1. Read the documentation of the [document store](https://haystack.deepset.ai/components/v1.0.0/document-store-api) and
-   the [document retriever](https://haystack.deepset.ai/components/v1.0.0/retriever-api) in the 
+1. Read the documentation of the [document store](https://haystack.deepset.ai/reference/document-store-api) and
+   the [document retriever](https://haystack.deepset.ai/reference/retriever-api) in the 
    [Haystack framework](https://haystack.deepset.ai/overview/intro).
 1. Install Haystack framework. You may need to used [this fork](https://github.com/apohllo/haystack/tree/use-auto-tokenizer-by-default) 
    to get support for Polish QA models.
