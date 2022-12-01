@@ -23,7 +23,7 @@ The task shows two simple methods useful for identifying multiword expressions (
 1. Using the tagged corpus compute bigram statistic for the tokens containing:
    a. lemmatized, downcased word
    b. morphosyntactic category of the word (subst, fin, adj, etc.)
-1. For example: "Ala ma kota", which is tagged as:
+1. For example: "Ala ma kota.", which is tagged as:
    ```
    Ala	none
            Ala	subst:sg:nom:f	disamb
