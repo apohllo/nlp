@@ -7,23 +7,11 @@ The exercise shows how a language model may be used to solve word-prediction tas
 
 1. Read the documentation of [Language modelling in the Transformers](https://huggingface.co/transformers/task_summary.html#language-modeling) library.
 1. Download three [Polish models](https://huggingface.co/models?filter=pl) from the Huggingface repository. 
-1. Produce the predictions for the following sentences (use each model and check 5 predictions):
-   1. (M) Warszawa to największe `[MASK]`.
-   1. (D) Te zabawki należą do `[MASK]`.
-   1. (C) Policjant przygląda się `[MASK]`.
-   1. (B) Na środku skrzyżowania widać `[MASK]`.
-   1. (N) Właściciel samochodu widział złodzieja z `[MASK]`.
-   1. (Ms) Prezydent z premierem rozmawiali wczoraj o `[MASK]`.
-   1. (W) Witaj drogi `[MASK]`.
-1. Check the model predictions for the following sentences (using each model):
-   1. Gdybym wiedział wtedy dokładnie to, co wiem teraz, to bym się nie `[MASK]`.
-   1. Gdybym wiedziała wtedy dokładnie to, co wiem teraz, to bym się nie `[MASK]`.
-1. Check the model predictions for the following sentences:
-   1. `[MASK]` wrze w temperaturze 100 stopni, a zamarza w temperaturze 0 stopni Celsjusza.
-   1. W wakacje odwiedziłem `[MASK]`, który jest stolicą Islandii.
-   1. Informatyka na `[MASK]` należy do najlepszych kierunków w Polsce.
-1. If you want to use causal language models such as PapuGaPT2 or plT5, you should change the last three examples to accomodate for the fact, that these
-   models are better suited for causal language modelling.
+1. Devise a method to test if the langage model understands Polish cases. E.g. testing for *nominal case* could be expressed as "Warszawa to największe `[MASK]`", and the masked word should be in nominative case. Create sentences for each case.
+1. Devise a method to test long-range relationships such as gender. E.e. you can use two verbs where withe masculine and feminine gender, where one of the verbs is masked. Both verbs should have the same gender, assuming the subject is the same. Define at least 3 such sentences.
+1. Check if the model captures real-world knolwedge. For instance a sentence "`[MASK]` wrze w temperaturze 100 stopni, a zamarza w temperaturze 0 stopni Celsjusza." checks if the model "knows" the description of water. Define at least 3 such sentences.
+1. Take into accout the fact, that causal language models such as PapuGaPT2 or plT5, will only generate continuations of the sentenes, so the
+   examples have to be created according to that paradigm.
 3. Answer the following questions:
    1. Which of the models produced the best results?
    1. Was any of the models able to capture Polish grammar?
