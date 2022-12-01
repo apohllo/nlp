@@ -5,8 +5,8 @@ The exercise shows how we may extract elements such as names of companies, count
 ## Tasks
 
 1. Read the classification of [Named Entities](https://clarin-pl.eu/dspace/bitstream/handle/11321/294/WytyczneKPWr-jednostkiidentyfikacyjne.pdf).
-1. Read the [API of NER](https://wiki.clarin-pl.eu/pl/nlpws) in [Clarin](http://ws.clarin-pl.eu/ner.shtml).
-1. Read the [documentation of CLL format](http://nlp.pwr.wroc.pl/redmine/projects/corpus2/wiki/CCL_format).
+1. Read the [API of NER](https://wiki.clarin-pl.eu/pl/nlpws/services/liner2) in [Clarin](https://ws.clarin-pl.eu/ner.shtml).
+1. Read the [documentation of CCL format](https://wiki.clarin-pl.eu/pl/nlpws/services/ccl) or [more tourough documentation of CCL format](http://nlp.pwr.wroc.pl/redmine/projects/corpus2/wiki/CCL_format).
 1. Sort bills according to their size and take top 50 (largest) bills.
 1. Use the lemmatized and sentence split documents (from ex. 5) to identify the expressions that consist of consecutive
    words starting with a capital letter (you will have to look at the inflected form of the word to check its
