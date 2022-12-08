@@ -9,8 +9,8 @@ The aim of this exercise is building a neural model able to answer contextual qu
 3. The subset of the answers that you have provided in point 2 is your *test dataset*. If in the dataset there are questions that are 
    the same as the questions in your test set, make the questions and the answers part of your test dataset (i.e. remove them from the training set).
 4. The remaing questions and answers are your *training set*. Divide that set into *training* and *validation* subsets. The validation part should 
-   be selected as 20% of the original training set. Make sure that there are no questions in the validation set that are present in the created training 
-   set. If there are such questions, make them part of the validation set.
+   be selected as 20% of the original training set. Make sure that there are no questions in the validation set that are present in the training 
+   subset. If there are such questions, make them part of the validation set.
 5. If the training set is small (less than 1 thousand question+answer pairs) use one of the available QA dataset for Polish, 
    e.g. [PoQUAD](https://github.com/ipipan/poquad) or [SQUAD](https://huggingface.co/datasets/squad). Using the second dataset is sensible, if you
    are training a multilingual model, like mT5.
