@@ -36,6 +36,7 @@ The aim of this exercise is building a neural model able to answer contextual qu
    3. What are the outcomes of the model on your own questions? Are they satisfying? If not, what might be the reason
       for that?
    4. Why extractive question answering is not well suited for inflectional languages?
+   5. Why you have to remove the duplicated questions from the training and the validation subsets?
 
 ## Hints
 1. Contextual question answering can be resolved by at lest two approaches:
