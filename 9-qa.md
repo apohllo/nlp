@@ -14,7 +14,10 @@ The aim of this exercise is building a neural model able to answer contextual qu
 5. If the training set is small (less than 1 thousand question+answer pairs) use one of the available QA dataset, 
    e.g. [PoQUAD](https://github.com/ipipan/poquad) or [SQUAD](https://huggingface.co/datasets/squad). Using the second dataset is sensible, if you
    are training a multilingual model, like mT5.
-7. Train a neural model able to answer the legal questions. Fine-tune at least two pre-trained models. The meaningful models include:
+7. Train a neural model able to answer the legal questions. Fine-tune at least two pre-trained models. Make sure you are using a machine
+   with a GPU, since training the model on CPU will be very long. 
+   The training should include at least 10 epochs (depending on the size of the training set you are using). 
+   The pre-trained models you can use include:
    * [plT5-base](https://huggingface.co/allegro/plt5-base)
    * [plT5-large](https://huggingface.co/allegro/plt5-large)
    * [mT5-base](https://huggingface.co/google/mt5-base)
