@@ -27,32 +27,32 @@ The aim of this exercise is building a neural model able to answer contextual qu
 9. Report the best results obtained on the validation dataset and the corresponding results on your test dataset. The results on the 
    test set have to be obtained for the model that yield the best result on the validation dataset.
 10. Generate, report and analyze the answers provided by the best model on you test dataset.
-11. * optional: perform hyperparameter tuning for the models to obtain better results. Take into account some of the following parameters:
+11. Optional: perform hyperparameter tuning for the models to obtain better results. Take into account some of the following parameters:
     * learning rate
     * gradient accumulation steps
     * batch size
     * gradient clipping
     * learning rate schedule 
 13. Answer the following questions:
-   1. Which pre-trained model performs better on that task?
-   2. Does the performance on the validation dataset reflects the performance on your test set?
-   3. What are the outcomes of the model on your own questions? Are they satisfying? If not, what might be the reason
+    1. Which pre-trained model performs better on that task?
+    2. Does the performance on the validation dataset reflects the performance on your test set?
+    3. What are the outcomes of the model on your own questions? Are they satisfying? If not, what might be the reason
       for that?
-   4. Why extractive question answering is not well suited for inflectional languages?
-   5. Why you have to remove the duplicated questions from the training and the validation subsets?
+    4. Why extractive question answering is not well suited for inflectional languages?
+    5. Why you have to remove the duplicated questions from the training and the validation subsets?
 
 ## Hints
 1. Contextual question answering can be resolved by at lest two approaches:
    * extractive QA (EQA) - the model has to select a consecutive sequence of tokens from the context which form the question.
    * abstractive QA (AQA) - the model has to generate a sequence of tokens, based on the question and the provided context.
 2. Decoder only models, like BERT, are not able to answer questions in the AQA paradigm, however they are very well suited for EQA.
-3. To resolve AQA you need a generative model, such as (m)T%, BART or GPT. These model (generally) are called sequence-to-sequence
+3. To resolve AQA you need a generative model, such as (m)T5, BART or GPT. These model (generally) are called sequence-to-sequence
    or text-to-text models, since they take text as the input and produce text as the output.
 4. Text-to-text model generate the text autoregresively, i.e. they produce one token at a given step and then feed the generated token 
    (and all tokens generated so far) as the input to the model when generating the next token. As a result the generation process is pretty slow.
-5. Many NLP tasks base on the neural networks can be solved with [ready-made scripts](https://github.com/huggingface/transformers/tree/main/examples/pytorch) available in the Transformers library.
+5. Many NLP tasks based on the neural networks can be solved with [ready-made scripts](https://github.com/huggingface/transformers/tree/main/examples/pytorch) available in the Transformers library.
 6. A model able to answer questions in the AQA paradigm may be trained with the [run_seq2seq_qa.py](https://github.com/huggingface/transformers/tree/main/examples/pytorch/question-answering) script available in Transfomers.
-   If using such a script make sure you are acquianted with the available training options - some of the are defined in the
+   If using such a script make sure you are acquianted with the available training options - some of them are defined in the
    [script itself](https://github.com/huggingface/transformers/blob/main/examples/pytorch/question-answering/run_seq2seq_qa.py#L56), 
    but most of them are inherited from the general [trainer](https://huggingface.co/docs/transformers/main_classes/trainer#transformers.TrainingArguments)
    or [seq2seq trainer](https://huggingface.co/docs/transformers/main_classes/trainer#transformers.Seq2SeqTrainingArguments).
