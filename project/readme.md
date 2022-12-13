@@ -31,7 +31,7 @@ dictionaries
 
 ## Resources
 
-* sample text corpus,
+* [sample text corpus](https://github.com/the-ultimate-krol/spacex),
 * keyphrases assigned to each document by some algorithm. Please note, that those phrases may not be present in the
   document, thus not fulfiling the requirement of being extractive keyphrases,
 * a reference algorithm extracting keypharses from documents in Polish: https://huggingface.co/Voicelab/vlt5-base-keywords
