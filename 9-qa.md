@@ -27,19 +27,19 @@ The aim of this exercise is building a neural model able to answer contextual qu
 9. Report the best results obtained on the validation dataset and the corresponding results on your test dataset. The results on the 
    test set have to be obtained for the model that yield the best result on the validation dataset.
 10. Generate, report and analyze the answers provided by the best model on you test dataset.
-11. * optional: perform hyperparameter tuning for the models to obtain better results. Take into account some of the following parameters:
+11. Optional: perform hyperparameter tuning for the models to obtain better results. Take into account some of the following parameters:
     * learning rate
     * gradient accumulation steps
     * batch size
     * gradient clipping
     * learning rate schedule 
 13. Answer the following questions:
-   1. Which pre-trained model performs better on that task?
-   2. Does the performance on the validation dataset reflects the performance on your test set?
-   3. What are the outcomes of the model on your own questions? Are they satisfying? If not, what might be the reason
+    1. Which pre-trained model performs better on that task?
+    2. Does the performance on the validation dataset reflects the performance on your test set?
+    3. What are the outcomes of the model on your own questions? Are they satisfying? If not, what might be the reason
       for that?
-   4. Why extractive question answering is not well suited for inflectional languages?
-   5. Why you have to remove the duplicated questions from the training and the validation subsets?
+    4. Why extractive question answering is not well suited for inflectional languages?
+    5. Why you have to remove the duplicated questions from the training and the validation subsets?
 
 ## Hints
 1. Contextual question answering can be resolved by at lest two approaches:
