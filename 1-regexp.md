@@ -1,52 +1,31 @@
 # Regular expressions (aka regexps)
 
 The task is concentrated on using regular expressions for extracting basic information from textual data. 
-You will get more familiar with the regexp features that are particularly important in natural language processing.
+You will get more familiar with the regexp features that are particularly important for natural language processing applications.
 
 ## Task
 
-A dataset containing texts of Polish statutory law is available at [https://apohllo.pl/text/ustawy.tar.gz](https://apohllo.pl/text/ustawy.tar.gz).
+A FIQA-PL dataset containing Polish questions and answers is available at [Huggigface](https://huggingface.co/datasets/clarin-knext/fiqa-pl).
+In this lab we only concentrate on the `corpus` split of the dataset.
 
-It contains texts of Polish bills, e.g.:
+Task objectives (8 points):
 
-```
-Tekst ustawy przyjęty przez Senat bez poprawek
- 
-USTAWA
-z
-dnia 8 listopada 2013 r.
- 
-o
-zmianie niektórych ustaw w związku z realizacją ustawy budżetowej[1])
- 
-Art.
-1. 
-W
-ustawie z dnia 4 marca 1994 r. o zakładowym funduszu świadczeń socjalnych (Dz. U.
-z 2012 r. poz. 592, z późn. zm.[2]))
-po art. 5b dodaje się art. 5c w brzmieniu:
-„Art. 5c. W 2014 r. przez
-przeciętne wynagrodzenie miesięczne w gospodarce narodowej, o którym mowa w art.
-5 ust. 2, należy rozumieć przeciętne wynagrodzenie miesięczne w gospodarce narodowej
-w drugim półroczu 2010 r. ogłoszone przez Prezesa Głównego Urzędu Statystycznego
-na podstawie art. 5 ust. 7.”.
-```
+1. Devise two regular expressions:
+   * extracting times, e.g. recognizing `20:30` as an instance of a time.
+   * extracting dates, e.g. recognizing `20 września` as an instance of date.
+2. Search for occurrences of times and dates in the dataset.
+3. Plot results from point 2:
+   * for times create a bar plot for full hours.
+   * for dates create a bar plot for months.
+4. Compute the number of occurrences of `styczeń` word in any inflectional form. Use a compact form for the query (i.e. joining all forms of the word by alternative is forbidden).
+5. As in 4, but preceded by a number and a space.
+6. As in 4, but not preceded by a number and a space. Check if the results from 5 and 6 sum to 4.
 
-Task objectives:
 
-1. For each bill compute the number of the following amendments present in the bill:
-   * addition of a unit (e.g. **dodaje się ust. 5a**),
-   * removal of a unit (e.g. **w art. 10 ust. 1 pkt 8 skreśla się**),
-   * change of a unit (e.g. **art. 5 otrzymuje brzmienie**).
-1. Note that other types of changes, e.g. **po wyrazach "na dofinansowanie" dodaje się wyrazy " , z zastrzeżeniem art. 21a,"**, must not be included in the result.
-1. Plot results from point 1 showing how the **percentage** of amendments of a given type changed in the consecutive years.
-1. Compute the total number of occurrences of the word **ustawa** in any inflectional form (*ustawa*, *ustawie*, *ustawę*, etc.)
-   and all spelling forms (*ustawa*, *Ustawa*, *USTAWA*), excluding other words with the same prefix (e.g. *ustawić*).
-1. Compute the total number of occurrences of the same word (same conditions), followed by **z dnia** expression.
-1. As above, but **not** followed by **z dnia** expression. Is the result correct (result 4 =? result 5 + result 6)?
-1. Compute the total number of occurrences of the word **ustawa** in any inflectional form, excluding occurrences
-   following **o zmianie** expression.
-1. Plot results 4-7 using a bar chart.
+Answer the following questions (2 points):
+1. Are regular expressions good at capturing times?
+2. Are regular expressions good at capturing dates?
+3. How one can be sure that the expression has matched all and only the correct expressions of a given type?
 
 ## Hints
 

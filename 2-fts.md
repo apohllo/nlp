@@ -5,29 +5,29 @@ operations in a text corpus.
 
 ## Tasks
 
+Task objective (8 points):
 1. Install ElasticSearch (ES).
-1. Install an ES plugin for Polish https://github.com/allegro/elasticsearch-analysis-morfologik 
-1. Define an ES analyzer for Polish texts containing:
+2. Install an ES plugin for Polish https://github.com/allegro/elasticsearch-analysis-morfologik 
+3. Define an ES analyzer for Polish texts containing:
    1. standard tokenizer
-   1. synonym filter with the following definitions:
-      1. kpk - kodeks postępowania karnego
-      1. kpc - kodeks postępowania cywilnego
-      1. kk - kodeks karny
-      1. kc - kodeks cywilny
-   1. Morfologik-based lemmatizer
-   1. lowercase filter
-1. Define an ES index for storing the contents of the legislative acts.
-1. Load the data to the ES index.
-1. Determine the number of legislative acts containing the word **ustawa** (in any form).
-2. Determine the number of occurrences of the word **ustawa** by searching for this particular form, including the other inflectional forms.
-3. Determine the number of occurrences of the word **ustaw** by searching for this particular form, including the other inflectional forms.
-4. Determine the number of legislative acts containing the words **kodeks postępowania cywilnego** 
-   in the specified order, but in any inflection form.
-1. Determine the number of legislative acts containing the words **wchodzi w życie** 
-   (in any form) allowing for up to 2 additional words in the searched phrase.
-1. Determine the 10 documents that are the most relevant for the phrase **konstytucja**.
-1. Print the excerpts containing the word **konstytucja** (up to three excerpts per document) 
-   from the previous task.
+   2. synonym filter with alternative forms for months, e.g. `wrzesień`, `wrz`, `IX`.
+   3. lowercase filter
+   4. Morfologik-based lemmatizer
+   5. lowercase filter (looks strange, but Morfologi produces capitalized base forms for proper names, so we have to lowercase them once more).
+4. Define another analyzer for Polish, without the synonym filter.
+5. Define an ES index for storing the contents of the corpus from lab 1 using both analyzers. Use different names for the fields analyzed with a different pipeline.
+6. Load the data to the ES index.
+7. Determine the number of documents containing the word `styczeń` (in any form) including and excluding the synonyms.
+8. Download the QA pairs for the [FIQA dataset](https://huggingface.co/datasets/clarin-knext/fiqa-pl-qrels).
+9. Compute NDCG@5 for the QA dataset for the following setusp:
+   * synonyms enabled and disabled,
+   * lemmatization in the query enabled and disabled.
+
+
+Answer the following questions (2 points):
+1. What are the strengths and weaknesses of regular expressions versus full text search regarding processing of text?
+2. Is full text search applicable to the question answering problem? Show at least 3 examples from the corpus to support your claim.
+
 
 ## Hints
 
