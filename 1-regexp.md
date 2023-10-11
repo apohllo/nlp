@@ -47,3 +47,4 @@ Answer the following questions (2 points):
 * You should be very careful when copying regexps from Internet - different languages and even different versions of the
   same language may interpret them differently, so make sure to always test them on a large set of diversified examples.
 * You can try regexes using https://regex101.com. It allows you to compare the matches between different programming languages.
+* You can use `datasets` Python library, to facilitate downloading and loading of the `clarin-knext/fiqa-pl` dataset.
