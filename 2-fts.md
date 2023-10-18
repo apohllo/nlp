@@ -76,3 +76,4 @@ Answer the following questions (2 points):
    ARG es_version
    RUN /usr/share/elasticsearch/bin/elasticsearch-plugin install pl.allegro.tech.elasticsearch.plugin:elasticsearch-analysis-morfologik:$es_version
    ```
+3. To build the docker run e.g. `docker build . --build-arg es_version=7.17.3` in the directory containing the Dockerfile.
