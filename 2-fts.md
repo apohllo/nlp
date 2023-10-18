@@ -19,9 +19,14 @@ Task objective (8 points):
 6. Load the data to the ES index.
 7. Determine the number of documents containing the word `styczeń` (in any form) including and excluding the synonyms.
 8. Download the QA pairs for the [FIQA dataset](https://huggingface.co/datasets/clarin-knext/fiqa-pl-qrels).
-9. Compute NDCG@5 for the QA dataset for the following setusp:
+9. Compute NDCG@5 for the QA dataset (the test subset) for the following setusp:
    * synonyms enabled and disabled,
    * lemmatization in the query enabled and disabled.
+10. (optional) Find three questions from the test subset with the following features:
+   * the relevant document is returned by ES at position 1,
+   * the relevant document is returned by ES  at position 4 or 5.
+   * the relevant document is returned by ES  not found.
+     and analyze the possible reasons for these outcomes.
 
 
 Answer the following questions (2 points):
@@ -61,3 +66,4 @@ Answer the following questions (2 points):
    Even though it's not valid from the linguistics' point of view, it works well in practice.
 1. [Term vector API](https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-termvectors.html) allows to retrieve useful 
    statistics of a given term in a particular document or in the whole document collection.
+1. Polish retrieval models comparison is available at :https://huggingface.co/spaces/sdadas/pirb
