@@ -26,7 +26,7 @@ Task objective (8 points):
    * the relevant document is returned by ES at position 1,
    * the relevant document is returned by ES  at position 4 or 5.
    * the relevant document is returned by ES  not found.
-     and analyze the possible reasons for these outcomes.
+11. (optional) Analyze the possible reasons for these outcomes.
 
 
 Answer the following questions (2 points):
