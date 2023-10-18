@@ -67,3 +67,12 @@ Answer the following questions (2 points):
 1. [Term vector API](https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-termvectors.html) allows to retrieve useful 
    statistics of a given term in a particular document or in the whole document collection.
 1. Polish retrieval models comparison is available at :https://huggingface.co/spaces/sdadas/pirb
+2. You can try to use the following Dockerfile for ElasticSearch with installed Morfologik plugin:
+   ```
+   ARG es_version
+   FROM docker.elastic.co/elasticsearch/elasticsearch:$es_version
+   # the ARG has to be doubled,
+   # cf. https://docs.docker.com/engine/reference/builder/#understand-how-arg-and-from-interact
+   ARG es_version
+   RUN /usr/share/elasticsearch/bin/elasticsearch-plugin install pl.allegro.tech.elasticsearch.plugin:elasticsearch-analysis-morfologik:$es_version
+   ```
