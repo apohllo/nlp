@@ -4,6 +4,7 @@ The task introduces the Levenshtein distance - a measure that is useful in tasks
 
 ## Tasks
 
+Task objectives (8 points):
 1. Use the corpus from exercise no. 1.
 2. Use SpaCy [tokenizer API](https://spacy.io/api/tokenizer) to tokenize the text in the documents.
 3. Compute **frequency list** for each of the processed files.
@@ -21,7 +22,8 @@ The task introduces the Levenshtein distance - a measure that is useful in tasks
 11. Compute nDCG@10 for your implementation of the spelling correction method.
 12. Use ElasticSearch's fuzzy match and compute nDCG@10 for this approach.
 13. Compare the results of baseline with the 2 implemented methods. Take into account the nDCG score and the performance of the methods.
-14. Draw conclusions regarding:
+   
+Draw conclusions regarding (2 points):
     * the distribution of words in the corpus,
     * the performance of your method compared to ElasticSearch,
     * the results provided by your method compared to ElasticSearch,
