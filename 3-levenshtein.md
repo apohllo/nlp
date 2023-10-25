@@ -24,10 +24,10 @@ Task objectives (8 points):
 13. Compare the results of baseline with the 2 implemented methods. Take into account the nDCG score and the performance of the methods.
    
 Draw conclusions regarding (2 points):
-    * the distribution of words in the corpus,
-    * the performance of your method compared to ElasticSearch,
-    * the results provided by your method compared to ElasticSearch,
-    * the validity of the obtained corrections.
+  * the distribution of words in the corpus,
+  * the performance of your method compared to ElasticSearch,
+  * the results provided by your method compared to ElasticSearch,
+  * the validity of the obtained corrections.
 
 ## Hints
 
