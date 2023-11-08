@@ -4,7 +4,7 @@ The task shows two simple methods useful for identifying multiword expressions (
 
 ## Tasks
 
-1. Use SpaCy [tokenizer API](https://spacy.io/api/tokenizer) to tokenize the text from the law corpus.
+1. Use SpaCy [tokenizer API](https://spacy.io/api/tokenizer) to tokenize the text from the PiQA corpus.
 1. Compute **bigram** counts of downcased tokens.  Given the sentence: "The quick brown fox jumps over the
    lazy dog.", the bigram counts are as follows:
    1. "the quick": 1
@@ -19,30 +19,25 @@ The task shows two simple methods useful for identifying multiword expressions (
 1. Sort the word pairs according to that measure in the descending order and determine top 10 entries.
 1. Filter bigrams with number of occurrences lower than 5. Determine top 10 entries for the remaining dataset (>=5
    occurrences).
-1. Use [KRNNT](https://hub.docker.com/r/djstrong/krnnt2) or [Clarin-PL API](https://ws.clarin-pl.eu/tager.shtml) to tag and lemmatize the corpus. Note: Clarin allows to upload a ZIP file with the whole corpus and process it as one request.
+1. Use SpaCy to [lemmatize](https://spacy.io/api/lemmatizer) and [tag](https://spacy.io/api/tagger) the sentences in the corpus.
 1. Using the tagged corpus compute bigram statistic for the tokens containing:
    a. lemmatized, downcased word
    b. morphosyntactic category of the word (subst, fin, adj, etc.)
 1. For example: "Ala ma kota.", which is tagged as:
    ```
-   Ala	none
-           Ala	subst:sg:nom:f	disamb
-   ma	space
-           mieć	fin:sg:ter:imperf	disamb
-   kota	space
-           kot	subst:sg:acc:m2	disamb
-   .	none
-           .	interp	disamb
+   Ala	Ala	subst:sg:nom:f
+   ma	   mieć	fin:sg:ter:imperf
+   kota	kot	subst:sg:acc:m2
+   .     .	interp
    ```
    the algorithm should return the following bigrams: `ala:subst mieć:fin` and `mieć:fin kot:subst`.
 1. Compute the same statistics as for the non-lemmatized words (i.e. PMI) and print top-10 entries with at least 5 occurrences.
-1. Compute **trigram** counts for both corpora and perform the same filtering.
-1. Use PMI (with 5 occurrence threshold) to compute top 10 results for the trigrams. Devise a method for computing the values, based on the
-   results for bigrams.
-1. Create a table comparing the results for copora without and with tagging and lemmatization (separate table for bigrams and trigrams).
+1. Group the bigrams by morphosyntactic tag, i.e. a pair of words belongs to a given group if all pairs have the same syntactic category
+   for the first and the second word. E.g. one group would be words with `subst` as the first words and `adj` as the second word.
+1. Print top-10 categories (sort them by total count of bigrams) and print top-5 pairs for each category.
+1. Create a table comparing the results for copora without and with tagging and lemmatization.
 1. Answer the following questions:
    1. Why do we have to filter the bigrams, rather than the token sequence?
-   1. Which method works better for the bigrams and which for the trigrams?
    1. What types of expressions are discovered by the methods.
    1. Can you devise a different type of filtering that would yield better results?
 
