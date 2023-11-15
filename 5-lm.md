@@ -5,18 +5,23 @@ The exercise shows how a language model may be used to solve word-prediction tas
 
 ## Tasks
 
+Objectives (8 points):
+
 1. Read the documentation of [Language modelling in the Transformers](https://huggingface.co/transformers/task_summary.html#language-modeling) library.
-1. Download three [Polish models](https://huggingface.co/models?filter=pl) from the Huggingface repository. 
+1. Download three [Polish models](https://huggingface.co/models?filter=pl) from the Huggingface repository. These should be regular language models, which were not fine-tuned. E.g. `HerBERT` and `papuGaPT2` are good examples.
 1. Devise a method to test if the langage model understands Polish cases. E.g. testing for *nominal case* could be expressed as "Warszawa to największe `[MASK]`", and the masked word should be in nominative case. Create sentences for each case.
-1. Devise a method to test long-range relationships such as gender. E.e. you can use two verbs where withe masculine and feminine gender, where one of the verbs is masked. Both verbs should have the same gender, assuming the subject is the same. Define at least 3 such sentences.
+1. Devise a method to test long-range relationships such as gender. E.e. you can use two verbs with masculine and feminine gender, where one of the verbs is masked. Both verbs should have the same gender, assuming the subject is the same. Define at least 3 such sentences.
 1. Check if the model captures real-world knolwedge. For instance a sentence "`[MASK]` wrze w temperaturze 100 stopni, a zamarza w temperaturze 0 stopni Celsjusza." checks if the model "knows" the description of water. Define at least 3 such sentences.
-1. Take into accout the fact, that causal language models such as PapuGaPT2 or plT5, will only generate continuations of the sentenes, so the
-   examples have to be created according to that paradigm.
-3. Answer the following questions:
+1. Check zero-shot learning capabilites of the models. Provide at least 5 sentences with different sentiment for the following scheme: "'Ten film to był kiler. Nie mogłem się oderwać od ekranu.' Wypowiedź ta ma jest zdecydowanie `[MASK]`" Try different prompts, to see if they make any difference.
+1. Take into accout the fact, that causal language models such as PapuGaPT2 or plT5, will only generate continuations of the sentenes, so the examples have to be created according to that paradigm.
+
+
+1. Answer the following questions (2 points):
    1. Which of the models produced the best results?
    1. Was any of the models able to capture Polish grammar?
    1. Was any of the models able to capture long-distant relationships between the words?
    1. Was any of the models able to capture world knowledge?
+   1. Was any of the models good at doing zero-shot classification?
    1. What are the most striking errors made by the models?
 
 ## Hints

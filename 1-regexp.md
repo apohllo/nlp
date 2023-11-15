@@ -1,4 +1,4 @@
-# Regular expressions (aka regexps)
+# Regular expressions (aka regex)
 
 The task is concentrated on using regular expressions for extracting basic information from textual data. 
 You will get more familiar with the regexp features that are particularly important for natural language processing applications.
