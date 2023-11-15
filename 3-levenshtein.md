@@ -17,7 +17,7 @@ Task objectives (8 points):
 8. Install [Morfeusz](http://morfeusz.sgjp.pl/download/) (Binding dla Pythona) and use it to find all words from the queries that do not
    appear in that dictionary. Only these words should be corected in the next step.
 10. Use Levenshtein distance and the frequency list, to determine the most probable correction of the words
-    in the queries. (**Note**: You don't have to apply the distance directly. Any method that is more
+    in the queries that were identified as invalid. (**Note**: You don't have to apply the distance directly. Any method that is more
     efficient than scanning the dictionary will be appreciated.)
 11. Compute nDCG@10 for your implementation of the spelling correction method.
 12. Use ElasticSearch's fuzzy match and compute nDCG@10 for this approach.
