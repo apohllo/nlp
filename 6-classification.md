@@ -31,7 +31,7 @@ TBA
 
 ## Hints
 
-1. You can use [this notebook](https://github.com/apohllo/sztuczna-inteligencja-rozwiazania/blob/master/lab5/lab_5.ipynb) as a skeleton for the training procedure.
+1. You can use [this notebook](https://github.com/apohllo/sztuczna-inteligencja/tree/master/lab5) as a skeleton for the training procedure.
 1. You can use [Google colab](https://colab.research.google.com/notebooks/intro.ipynb) to perform experiments which
    require access to GPU or TPU.
 1. [Huggingface Transformers](https://github.com/huggingface/transformers) library is a popular library for performing NLP tasks base on the transformer
