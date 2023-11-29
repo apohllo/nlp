@@ -46,13 +46,13 @@ The aim of this exercise is building a neural model able to answer contextual qu
    * extractive QA (EQA) - the model has to select a consecutive sequence of tokens from the context which form the question.
    * abstractive QA (AQA) - the model has to generate a sequence of tokens, based on the question and the provided context.
 2. Decoder only models, like BERT, are not able to answer questions in the AQA paradigm, however they are very well suited for EQA.
-3. To resolve AQA you need a generative model, such as (m)T%, BART or GPT. These model (generally) are called sequence-to-sequence
+3. To resolve AQA you need a generative model, such as (m)T5, BART or GPT. These model (generally) are called sequence-to-sequence
    or text-to-text models, since they take text as the input and produce text as the output.
 4. Text-to-text model generate the text autoregresively, i.e. they produce one token at a given step and then feed the generated token 
    (and all tokens generated so far) as the input to the model when generating the next token. As a result the generation process is pretty slow.
-5. Many NLP tasks base on the neural networks can be solved with [ready-made scripts](https://github.com/huggingface/transformers/tree/main/examples/pytorch) available in the Transformers library.
+5. Many NLP tasks based on the neural networks can be solved with [ready-made scripts](https://github.com/huggingface/transformers/tree/main/examples/pytorch) available in the Transformers library.
 6. A model able to answer questions in the AQA paradigm may be trained with the [run_seq2seq_qa.py](https://github.com/huggingface/transformers/tree/main/examples/pytorch/question-answering) script available in Transfomers.
-   If using such a script make sure you are acquianted with the available training options - some of the are defined in the
+   If using such a script make sure you are acquianted with the available training options - some of them are defined in the
    [script itself](https://github.com/huggingface/transformers/blob/main/examples/pytorch/question-answering/run_seq2seq_qa.py#L56), 
    but most of them are inherited from the general [trainer](https://huggingface.co/docs/transformers/main_classes/trainer#transformers.TrainingArguments)
    or [seq2seq trainer](https://huggingface.co/docs/transformers/main_classes/trainer#transformers.Seq2SeqTrainingArguments).

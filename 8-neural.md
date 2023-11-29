@@ -16,14 +16,14 @@ bi-encoder neural model).
    1. The ES store should properly process Polish documents.
    2. For DPR you should use [enelpol/czywiesz-question](https://huggingface.co/enelpol/czywiesz-question) and 
       [enelpol/czywiesz-context](https://huggingface.co/enelpol/czywiesz-context) encoders.
-   3. **Warning:** Make sure to used models uploaded past 21st of December 2021, since the first model version included a bug.
+   3. **Warning:** Make sure to use models uploaded past 21st of December 2021, since the first model version included a bug.
 4. Pre-process all documents from the set of Polish bills (used in the previous exercises), but splitting them into
    individual articles: 
    1. You can apply a simple heuristic that searches for `Art.` at the beginnign of the processed line, to identify the passages. 
-   2. Assing identifiers to the passages by combining the file name with the article id.
+   2. Assign identifiers to the passages by combining the file name with the article id.
    3. There might be repeated identifiers, since we use a heuristic. You should ignore that problem - just make sure
       that you load only one passage with a specific id.
-3. Load the passages from previous point to the document stores described in point 2.
+3. Load the passages from previous point to the document stores described in point 3.
 8. Use the set of questions defined in [this dataset](https://github.com/apohllo/simple-legal-questions-pl) to assess the performance of the document stores.
 9. Compare the performance of the data stores using the following metrics: Pr@1, Rc@1, Pr@3, Rc@3.
 10. Answer the following questions:
