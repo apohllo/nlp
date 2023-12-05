@@ -20,30 +20,27 @@ Objectives (8 points)
       all documents each time the script is run, which is time consuming.
 4. Load the documents (passages) from the FiQA corpus.
 5. Use the set of questions defined in this corpus, to compute NDCG for the dense retriever.
-6. Compare the NDCG score from this exercise with the score from lab 2.
+6. Compare the NDCG score from this exercise with the score from [lab 2](2-fts.md).
 
 Questions (2 points)
 
-1. Which of the document stores performs better? Take into account the different metrics enumerated in the previous
-   point.
-2. Which of the document stores is faster?
-3. Try to determine the other pros and cons of using sparse and dense document retrieval models.
+1. Which of the methods: lexical match (e.g. ElasticSearch) or dense representation works better? 
+2. Which of the methods is faster?
+3. Try to determine the other pros and cons of using lexical search and dense document retrieval models.
    
 
 ## Hints
 
 1. Haystack is a framework for buliding question answering applications.
-2. Sparse document retrieval is based on sparse vector models, i.e. models based on bag of words. ElasticSearch typical
-   usage is based on sparse document model.
+2. Lexical document retrieval is based on traditional NLP pipelines (e.g. lemmatization),
+   i.e. models based on bag of words. ElasticSearch typical usage is based on lexical search model.
 3. Dense document retrieval is based on dense vector models provided by neural networks. These dense vectors might be 
    generated directly, by e.g. avaraging the vectors of word embeddings belonging to a given text fragment. Yet such
    models performance is inferior to sparse models.
 4. More sophisticated models are trained directly on the document retrieval task. E.g. [DPR](https://arxiv.org/abs/2004.04906)
    uses a bi-encoder architecture that has a separate neural network for encoding the question and for encoding the passage.
+   [E5](https://arxiv.org/abs/2212.03533) model has a shared encoder architecture.
    These netowrks are trained to maximise the dot-product of the vectors produced by each of the networks.
 5. Using dense vector representation requires computing the dense vectors for all passages in the dataset. 
    These vectors might be stored in document stores such as [FAISS](https://github.com/facebookresearch/faiss) for faster retrieval, 
    especially when the dataset is very large (does not fit into memory).
-6. Pr@n and Rc@n meen *precision at n* and *recall at n*. They are computed by retrieving `n` top documents and
-   computing the metrics in a regular way. E.g. if among 3 retrieved documents there are 2 valid documents out of 5, 
-   Pr@3 is 2/3 = 66% and Rc@3 is 2/5 = 40%.
