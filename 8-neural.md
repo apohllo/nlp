@@ -9,7 +9,7 @@ representations (e.g. ElasticSearch default behaviour), with dense text represen
 
 Objectives (8 points)
 
-1. Read the documentation of the [document store]((https://docs.haystack.deepset.ai/docs/document_store) and
+1. Read the documentation of the [document store](https://docs.haystack.deepset.ai/docs/document_store) and
    the [retriever](https://docs.haystack.deepset.ai/docs/retriever) in the 
    [Haystack framework](https://haystack.deepset.ai/).
 2. Install Haystack framework (e.g. with `pip install 'farm-haystack[all]'`).
