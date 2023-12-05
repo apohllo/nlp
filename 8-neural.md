@@ -23,7 +23,7 @@ Objectives (8 points)
 6. Compare the NDCG score from this exercise with the score from [lab 2](2-fts.md) and from [lab 6](6-classification.md).
 7. **Bonus** (+2p) Combine dense retrieval with classification model from [lab 6](6-classification.md) to implement a two-step
    retrieval. Compute NDCG@5 for this combined model.
-8. **Bonus** (+2p) Use a different dense encoder, e.g. [E5 large](https://huggingface.co/intfloat/multilingual-e5-large) or [Polish Roberta Base](https://huggingface.co/sdadas/mmlw-retrieval-roberta-base) and compute NDCG@5.
+8. **Bonus** (+2p) Use a different dense encoder, e.g. [E5 large](https://huggingface.co/intfloat/multilingual-e5-large), [Silver retriever](https://huggingface.co/ipipan/silver-retriever-base-v1) or [Polish Roberta Base](https://huggingface.co/sdadas/mmlw-retrieval-roberta-base) and compute NDCG@5.
 
 Questions (2 points)
 
