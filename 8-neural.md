@@ -14,8 +14,8 @@ Objectives (8 points)
    [Haystack framework](https://haystack.deepset.ai/).
 2. Install Haystack framework (e.g. with `pip install 'farm-haystack[all]'`).
 3. Configure a document store based on Faiss supported by multilingual E5 model:
-   1. For Faiss use [multilingual E5](https://huggingface.co/intfloat/multilingual-e5-base) encoder.
-   3. **Warning:** Make sure to [properly configure](https://github.com/deepset-ai/haystack/issues/5242) the store.
+   1. For Faiss use [multilingual E5](https://huggingface.co/intfloat/multilingual-e5-base) or [silver retriever base](https://huggingface.co/ipipan/silver-retriever-base-v1) encoder.
+   3. **Warning:** If you use E5, make sure to [properly configure](https://github.com/deepset-ai/haystack/issues/5242) the store.
    4. In the case you have problems using Faiss, you can use `InMemoryDocumentStore`, but this will require to re-index
       all documents each time the script is run, which is time consuming.
 4. Load the documents (passages) from the FiQA corpus.
@@ -23,7 +23,7 @@ Objectives (8 points)
 6. Compare the NDCG score from this exercise with the score from [lab 2](2-fts.md) and from [lab 6](6-classification.md).
 7. **Bonus** (+2p) Combine dense retrieval with classification model from [lab 6](6-classification.md) to implement a two-step
    retrieval. Compute NDCG@5 for this combined model.
-8. **Bonus** (+2p) Use a different dense encoder, e.g. [E5 large](https://huggingface.co/intfloat/multilingual-e5-large), [Silver retriever](https://huggingface.co/ipipan/silver-retriever-base-v1) or [Polish Roberta Base](https://huggingface.co/sdadas/mmlw-retrieval-roberta-base) and compute NDCG@5.
+8. **Bonus** (+2p) Use a different dense encoder, e.g. [E5 large](https://huggingface.co/intfloat/multilingual-e5-large) or [Polish Roberta Base](https://huggingface.co/sdadas/mmlw-retrieval-roberta-base) and compute NDCG@5.
 
 Questions (2 points)
 
