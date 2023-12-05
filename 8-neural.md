@@ -14,8 +14,7 @@ Objectives (8 points)
    [Haystack framework](https://haystack.deepset.ai/).
 2. Install Haystack framework (e.g. with `pip install 'farm-haystack[all]'`).
 3. Configure a document store based on Faiss supported by multilingual E5 model:
-   1. The ES store should properly process Polish documents.
-   2. For Faiss use [multilingual E5](https://huggingface.co/intfloat/multilingual-e5-base) encoder.
+   1. For Faiss use [multilingual E5](https://huggingface.co/intfloat/multilingual-e5-base) encoder.
    3. **Warning:** Make sure to [properly configure](https://github.com/deepset-ai/haystack/issues/5242) the store.
    4. In the case you have problems using Faiss, you can use `InMemoryDocumentStore`, but this will require to re-index
       all documents each time the script is run, which is time consuming.
