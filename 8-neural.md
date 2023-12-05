@@ -47,3 +47,4 @@ Questions (2 points)
 5. Using dense vector representation requires computing the dense vectors for all passages in the dataset. 
    These vectors might be stored in document stores such as [FAISS](https://github.com/facebookresearch/faiss) for faster retrieval, 
    especially when the dataset is very large (does not fit into memory).
+6. [Polish retrieval benchmark](https://huggingface.co/spaces/sdadas/pirb) lists and compares the models that implement dense retrieval for Polish.
