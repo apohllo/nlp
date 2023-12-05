@@ -1,7 +1,8 @@
 # Neural search for question answering
 
-The exercise introduces the problem of factual question answering. This part concentrates on the methods for retrieving
-the content of documents that potentialy might be useful for answering the question. We compare sparse text
+The exercise introduces the problem of passage retrieval, an important step in factual question answering. 
+This part concentrates on the methods for retrieving
+the content of documents that might be useful for answering the question. We compare lexical text
 representations (e.g. ElasticSearch default behaviour), with dense text representations (e.g. [multilingual E5](https://huggingface.co/intfloat/multilingual-e5-base) neural model).
 
 ## Tasks
