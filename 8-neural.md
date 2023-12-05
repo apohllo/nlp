@@ -20,7 +20,7 @@ Objectives (8 points)
    4. In the case you have problems using Faiss, you can use `InMemoryDocumentStore`, but this will require to re-index
       all documents each time the script is run, which is time consuming.
 4. Load the documents (passages) from the FiQA corpus.
-5. Use the set of questions defined in this corpus, to compute NDCG for the dense retriever.
+5. Use the set of questions defined in this corpus, to compute NDCG@5 for the dense retriever.
 6. Compare the NDCG score from this exercise with the score from [lab 2](2-fts.md).
 
 Questions (2 points)
