@@ -10,7 +10,7 @@ The aim of this exercise is building a neural model able to answer contextual qu
 2. **Bonus +5 points** Select one of the open issues in the dataset, provide the answers for the questions in the
    package and open a pull request with the answers.
 3. The legal questions dataset is your **test dataset**.
-4. [PoQuAD](https://github.com/clarin-pl/poquad) is your **train and validation dataset** (use the splits from the repo).
+4. [PoQuAD](https://huggingface.co/datasets/clarin-pl/poquad) is your **train and validation dataset** (use the splits from the repo).
 5. **Warning** PoQuAD has a python API compatible with the `datasets` library, but it only provides the **extractive answers**, even
    though the abstractive answers are available in the JSON files. So you have to read the JSON files directly.
 6. **Bonus +5 points** If you write a pull request with the changes to the API of the dataset that will expose the abstractive answers
