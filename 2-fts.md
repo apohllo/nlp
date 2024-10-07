@@ -68,13 +68,8 @@ Answer the following questions (2 points):
 1. [Term vector API](https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-termvectors.html) allows to retrieve useful 
    statistics of a given term in a particular document or in the whole document collection.
 1. Polish retrieval models comparison is available at :https://huggingface.co/spaces/sdadas/pirb
-2. You can try to use the following Dockerfile for ElasticSearch with installed Morfologik plugin:
-   ```
-   ARG es_version
-   FROM docker.elastic.co/elasticsearch/elasticsearch:$es_version
-   # the ARG has to be doubled,
-   # cf. https://docs.docker.com/engine/reference/builder/#understand-how-arg-and-from-interact
-   ARG es_version
-   RUN /usr/share/elasticsearch/bin/elasticsearch-plugin install pl.allegro.tech.elasticsearch.plugin:elasticsearch-analysis-morfologik:$es_version
-   ```
-3. To build the docker run e.g. `docker build . --build-arg es_version=8.8.2` in the directory containing the Dockerfile.
+2. In the `elastic` directory there's a basic configuration for runnig ElasticSearch with `docker compose`:
+   1. You can use the `docker-compose.yml` configuration - it will start ES with the morfologik plugin installed.
+   2. You can also modify the `Dockerfile` configuration and run it locally.
+   3. In the `query.sh` file there's a check for ES showing if it is possible to connect to the instance using `curl`. 
+   4. The correct output from curl is `[]` meaning there aren't any indices defined.
