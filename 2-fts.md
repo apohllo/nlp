@@ -10,28 +10,29 @@ Task objective (8 points):
 2. Install an ES plugin for Polish https://github.com/allegro/elasticsearch-analysis-morfologik 
 3. Define an ES analyzer for Polish texts containing:
    1. standard tokenizer
-   2. synonym filter with alternative forms for months, e.g. `wrzesień`, `wrz`, `IX`.
+   2. synonym filter with alternative forms for months, e.g. `kwiecień`, `kwi`, `IV`.
    3. lowercase filter
    4. Morfologik-based lemmatizer
    5. lowercase filter (looks strange, but Morfologi produces capitalized base forms for proper names, so we have to lowercase them once more).
 4. Define another analyzer for Polish, without the synonym filter.
-5. Define an ES index for storing the contents of the corpus from lab 1 using both analyzers. Use different names for the fields analyzed with a different pipeline.
-6. Load the data to the ES index.
-7. Determine the number of documents containing the word `styczeń` (in any form) including and excluding the synonyms.
-8. Download the QA pairs for the [FIQA dataset](https://huggingface.co/datasets/clarin-knext/fiqa-pl-qrels).
-9. Compute NDCG@5 for the QA dataset (the test subset) for the following setusp:
+5. Define an ES index for storing the contents of the corpus [FiQA-PL](https://huggingface.co/datasets/clarin-knext/fiqa-pl) using both analyzers.
+   Use different names for the fields analyzed with a different pipeline.
+7. Load the data to the ES index.
+8. Determine the number of documents and the number of matches containing the word `kwiecień` (in any form) including and excluding the synonyms.
+9. Download the QA pairs for the [FiQA-PL dataset](https://huggingface.co/datasets/clarin-knext/fiqa-pl-qrels).
+10. Compute NDCG@5 for the QA dataset (the test subset) for the following setusp:
    * synonyms enabled and disabled,
    * lemmatization in the query enabled and disabled.
-10. (optional) Find three questions from the test subset with the following features:
+11. (optional) Find three questions from the test subset with the following features:
    * the relevant document is returned by ES at position 1,
-   * the relevant document is returned by ES  at position 4 or 5.
-   * the relevant document is returned by ES  not found.
+   * the relevant document is returned by ES at position 4 or 5.
+   * the relevant document is returned by ES is not found.
 11. (optional) Analyze the possible reasons for these outcomes.
 
 
 Answer the following questions (2 points):
 1. What are the strengths and weaknesses of regular expressions versus full text search regarding processing of text?
-2. Is full text search applicable to the question answering problem? Show at least 3 examples from the corpus to support your claim.
+2. Can an LLM be applied in the context of searching for documents? Justify your answer, excluding the obvious observation that an LLM can be used to formulate the answer.
 
 
 ## Hints
