@@ -22,12 +22,14 @@ Task objectives (8 points):
 11. Compute nDCG@10 for your implementation of the spelling correction method.
 12. Use ElasticSearch's fuzzy match and compute nDCG@10 for this approach.
 13. Compare the results of baseline with the 2 implemented methods. Take into account the nDCG score and the performance of the methods.
+14. Use an LLM of your choice to fix 30 first queries from the distored set and compare the results manually with the method based on the Levenshtein distance.
    
 Draw conclusions regarding (2 points):
   * the distribution of words in the corpus,
   * the performance of your method compared to ElasticSearch,
   * the results provided by your method compared to ElasticSearch,
-  * the validity of the obtained corrections.
+  * the validity of the obtained corrections,
+  * ability of an LLM to fix invalid queries.
 
 ## Hints
 
