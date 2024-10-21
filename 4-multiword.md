@@ -4,6 +4,8 @@ The task shows two simple methods useful for identifying multiword expressions (
 
 ## Tasks
 
+Objectives (8 points)
+
 1. Use SpaCy [tokenizer API](https://spacy.io/api/tokenizer) to tokenize the text from the FIQA corpus (from the 1 lab).
 1. Compute **bigram** counts of downcased tokens.  Given the sentence: "The quick brown fox jumps over the
    lazy dog.", the bigram counts are as follows:
@@ -36,6 +38,10 @@ The task shows two simple methods useful for identifying multiword expressions (
    for the first and the second word. E.g. one group would be words with `subst` as the first words and `adj` as the second word.
 1. Print top-10 categories (sort them by total count of bigrams) and print top-5 pairs for each category.
 1. Create a table comparing the results for copora without and with tagging and lemmatization.
+
+
+Conclusions (2 points)
+
 1. Answer the following questions:
    1. Why do we have to filter the bigrams, rather than the token sequence?
    1. What types of expressions are discovered by the methods.
