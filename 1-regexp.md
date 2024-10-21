@@ -15,7 +15,7 @@ Task objectives (8 points):
    * extracting dates, e.g. recognizing `20 września` as an instance of a date.
 2. Search for occurrences of times and dates in the dataset.
 3. Plot results from point 2:
-   * for times create a bar plot for full hours.
+   * for times create a bar plot for full hours (i.e. 17:35 -> is 17).
    * for dates create a bar plot for months.
 4. Compute the number of occurrences of `kwiecień` word in any inflectional form. Use a compact form for the query (i.e. joining all forms of the word by alternative is forbidden).
 5. As in 4, but preceded by a number and a space.
