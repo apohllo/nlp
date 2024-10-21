@@ -40,12 +40,11 @@ Objectives (8 points)
 1. Create a table comparing the results for copora without and with tagging and lemmatization.
 
 
-Conclusions (2 points)
+Answer the following questions (2 points):
 
-1. Answer the following questions:
-   1. Why do we have to filter the bigrams, rather than the token sequence?
-   1. What types of expressions are discovered by the methods.
-   1. Can you devise a different type of filtering that would yield better results?
+1. Why do we have to filter the bigrams, rather than the token sequence?
+1. What types of expressions are discovered by the methods.
+1. Can you devise a different type of filtering that would yield better results?
 
 ## Hints
 
