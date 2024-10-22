@@ -8,7 +8,7 @@ The exercise shows how a language model may be used to solve word-prediction tas
 Objectives (8 points):
 
 1. Read the documentation of [Language modelling in the Transformers](https://huggingface.co/transformers/task_summary.html#language-modeling) library.
-1. Download three [Polish models](https://huggingface.co/models?filter=pl) from the Huggingface repository. These should be regular language models, which were not fine-tuned. E.g. `HerBERT` and `papuGaPT2` are good examples.
+1. Download three [Polish models](https://huggingface.co/models?filter=pl) from the Huggingface repository. These should be regular language models, which were not fine-tuned. E.g. `HerBERT` and `papuGaPT2` are good examples. You can also try using Bielik for that, but make sure you are using the model via Transformers API, not GUI.
 1. Devise a method to test if the langage model understands Polish cases. E.g. testing for *nominal case* could be expressed as "Warszawa to największe `[MASK]`", and the masked word should be in nominative case. Create sentences for each case.
 1. Devise a method to test long-range relationships such as gender. E.e. you can use two verbs with masculine and feminine gender, where one of the verbs is masked. Both verbs should have the same gender, assuming the subject is the same. Define at least 3 such sentences.
 1. Check if the model captures real-world knolwedge. For instance a sentence "`[MASK]` wrze w temperaturze 100 stopni, a zamarza w temperaturze 0 stopni Celsjusza." checks if the model "knows" the description of water. Define at least 3 such sentences.
