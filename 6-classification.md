@@ -25,6 +25,8 @@ Objectives (8 points):
    pairs. To make the process manageable use models of size `base` and a runtime providing GPU/TPU acceleration.
    Consult the discussions related to fine-tuning Transformer models to select sensible set of parameters.
    You can also run several trainings with different hyper-parameters, if you have access to large computing resources.
+1. Make sure you monitor the relevant metrics on the validation set during training. The last saved model might not be the
+   one with the best performance.
 1. Report the results you have obtained for the model. Use appropriate measures, since the dataset is not balanced.
 1. Use the classifier as a re-ranker for finding the answers to the questions. Since the re-ranker is slow, you
    have to limit the subset of possible passages to top-n (10, 50 or 100 - depending on your GPU) texts returned by much faster model, e.g. FTS.
