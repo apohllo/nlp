@@ -12,11 +12,14 @@ Objectives (8 points):
 
 1. Use the FIQA-PL dataset that was used in lab 1 **and** lab lab 2 (so we need the passages, the questions and their
    relations).
-1. Create a dataset of positive and negative sentence pairs. In each pair the first element is a question and the
-   second element is a passage. Use the relations to mark the positive pairs (i.e. pairs where the question is answered
-   by the passage). Use your own strategy to mark negative pairs (i.e. you can draw the negative examples, but there are
-   better strategies to define the negative examples). The number of negative examples should be much larger than the
-   number of positive examples.
+1. Create a dataset of positive and negative sentence pairs.
+   1. In each pair the first element is a question and the second element is a passagei, i.e. "{question} {separator} {passage}",
+      where `separator` should be a separator taken from the model's tokenizer.
+   2. Use the relations to mark the positive pairs (i.e. pairs where the question is answered
+      by the passage).
+   3. Use your own strategy to mark negative pairs (i.e. you can draw the negative examples, but there are
+      better strategies to define the negative examples). The number of negative examples should be larger than the
+      number of positive examples.
 1. The dataset from point 2 should be split into training, evaluation and testing subsets.
 1. Train a text classifier using the Transformers library that distinguishes between the positive and the negative
    pairs. To make the process manageable use models of size `base` and a runtime providing GPU/TPU acceleration.
