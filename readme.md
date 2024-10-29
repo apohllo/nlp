@@ -12,3 +12,8 @@ The tasks accompanying the Natural Language Processing classes at AGH University
 5. [Neural Search](8-neural.md)
 7. [Question Answering](9-qa.md)
 
+# Staff
+
+* Aleksander Smywiński-Pohl, PhD,
+* Magda Król,
+* Bartosz Minch, PhD.
