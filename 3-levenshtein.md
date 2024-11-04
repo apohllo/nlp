@@ -5,7 +5,7 @@ The task introduces the Levenshtein distance - a measure that is useful in tasks
 ## Tasks
 
 Task objectives (8 points):
-1. Use the corpus from exercise no. 1.
+1. Use FIQA-PL corpus, including documents, questions and relations between them.
 2. Use SpaCy [tokenizer API](https://spacy.io/api/tokenizer) to tokenize the text in the documents.
 3. Compute **frequency list** for each of the processed files.
 4. Aggregate the result to obtain one global frequency list. This frequency list gives you unigram statistics of the words
