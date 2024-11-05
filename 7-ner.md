@@ -8,7 +8,7 @@ Objectives (8 points):
 
 1. Read the API of [NER](https://spacy.io/api/entityrecognizer) in Spacy
 1. Take 1 thousand random passages from the FIQA-PL corpus.
-1. Use the lemmatized and sentence split documents (from ex. 5) to identify the expressions that consist of consecutive
+1. Use the lemmatized and sentence split documents (using SpaCy API for [lemmatization](https://spacy.io/api/lemmatizer) and [sentence splitting](https://spacy.io/api/sentencizer)) to identify the expressions that consist of consecutive
    words starting with a capital letter (you will have to look at the inflected form of the word to check its
    capitalization) that do not occupy the first position in a sentence. E.g. the sentence:
    ```
