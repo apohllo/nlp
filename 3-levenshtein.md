@@ -14,7 +14,9 @@ Task objectives (8 points):
 6. Compute nDCG@10 for the distorted queris, using the same approach as in lab 2. This result will be the baseline
    for the other methods.
 8. Install [Morfeusz](http://morfeusz.sgjp.pl/download/) (Binding dla Pythona) and use it to find all words from the queries that do not
-   appear in that dictionary. Only these words should be corected in the next step.
+   appear in that dictionary. Only these words should be corected in the next step. This step is not obligatory - if there's a problem
+   installing Morfeusz, you can use one of the raw text files (Morfeusz "Słownik Polimorf" or "Słownik SGJP") and use the first column,
+   as a list of all valid forms in Polish.
 10. Use Levenshtein distance and the frequency list, to determine the most probable correction of the words
     in the queries that were identified as invalid. (**Note**: You don't have to apply the distance directly. Any method that is more
     efficient than scanning the dictionary will be appreciated.)
