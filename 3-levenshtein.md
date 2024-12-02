@@ -10,7 +10,7 @@ Task objectives (8 points):
 3. Compute **frequency list** for each of the processed files.
 4. Aggregate the result to obtain one global frequency list. This frequency list gives you unigram statistics of the words
    appearing in the corpus.
-5. Apply a distortion function to the queries part of the corpus. In each query draw randomly one word and remove, add or change one letter in the word (2024/2025 was only change one letter).
+5. Apply a distortion function to the queries part of the corpus. In each query draw randomly one word and remove, add or change one letter in the word (2024/2025 was only change one letter, in 2025 should draw randomly the number of words and number of letters according to Normal distribution).
 6. Compute nDCG@10 for the distorted queris, using the same approach as in lab 2. This result will be the baseline
    for the other methods.
 8. Install [Morfeusz](http://morfeusz.sgjp.pl/download/) (Binding dla Pythona) and use it to find all words from the queries that do not
