@@ -41,8 +41,10 @@ Questions (2 points):
 ## Hints
 
 1. Careful chunk size selection is crucial for relevant context retrieval
-2. Consider implementing re-ranking of retrieved documents
-3. Prompt engineering significantly impacts answer quality
-4. Caching can greatly improve system performance during development
-5. Consider using metadata filtering to improve retrieval precision
-6. The choice of embedding model affects both accuracy and speed
+2. To select LLM for answer generation you can consult [LLM leaderboard](https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard#/) or [Polish LLM Leaderboard](https://huggingface.co/spaces/speakleash/open_pl_llm_leaderboard).
+3. To select model for retrieval (embedding generation) you can consul [Embedding leaderboard](https://huggingface.co/spaces/mteb/leaderboard) or [Polish embedding leaderboard](https://huggingface.co/spaces/sdadas/pirb).
+4. Consider implementing re-ranking of retrieved documents
+5. Prompt engineering significantly impacts answer quality
+6. Caching can greatly improve system performance during development
+7. Consider using metadata filtering to improve retrieval precision
+8. The choice of embedding model affects both accuracy and speed
