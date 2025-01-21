@@ -27,7 +27,7 @@ Task objectives (8 points):
    
 Draw conclusions regarding (2 points):
   * the distribution of words in the corpus,
-  * the performance of your method compared to ElasticSearch,
+  * the performance (speed) of your method compared to ElasticSearch,
   * the results provided by your method compared to ElasticSearch,
   * the validity of the obtained corrections,
   * ability of an LLM to fix invalid queries.
