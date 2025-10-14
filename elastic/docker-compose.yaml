@@ -1,9 +1,0 @@
-version: '3.8'
-
-services:
-  search:
-    image: apohllo/elasticsearch-morfologik:8.15.2
-    ports:
-      - "9200:9200"
-    volumes:
-      - ./config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
