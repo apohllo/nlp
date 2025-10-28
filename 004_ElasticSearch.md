@@ -6,7 +6,7 @@
 
 1. Poznanie zasad działania pełnotekstowego wyszukiwania (Full-Text Search).
 2. Uruchomienie lokalnej instancji ElasticSearch z wtyczką Morfologik dla języka polskiego.
-3. Indeksowanie próbek korpusu OSCAR-PL (z Lab 3).
+3. Indeksowanie próbek korpusu CulturaX (z Lab 3).
 4. Eksperymenty z synonimami, lematyzacją i fleksją nazw własnych oraz wyszukiwaniem złożonym.
 5. Porównanie skuteczności RegExp i FTS oraz przygotowanie gruntu pod Hybrid Search (FTS + LLM).
 
@@ -19,7 +19,7 @@
 - Docker lub Docker Desktop
 - `curl` / Kibana / Postman
 - (opcjonalnie) Python z `requests`
-- próbka oczyszczonego korpusu OSCAR-PL (min. 500-1000 zdań)
+- próbka oczyszczonego korpusu CulturaX (min. 500-1000 zdań)
 
 
 
@@ -92,7 +92,7 @@ Oczekiwany wynik: w kolumnie `component` pojawi się `analysis-morfologik`.
 ## 4. Tworzymy indeks i analizatory dla języka polskiego
 
 ```
-PUT /oscar_pl
+PUT /culturaX_pl
 {
   "settings": {
     "analysis": {
@@ -143,7 +143,7 @@ PUT /oscar_pl
 ## 5. Wczytanie danych testowych
 
 ```
-POST /oscar_pl/_bulk
+POST /culturaX_pl/_bulk
 { "index": {} }
 { "text_syn": "W kwietniu 2025 w Warszawie odbyła się konferencja AI.", "text_lem": "W kwietniu 2025 w Warszawie odbyła się konferencja AI.", "date": "2025-04-12" }
 { "index": {} }
@@ -165,7 +165,7 @@ POST /oscar_pl/_bulk
 ### 6.1. Synonimy miesięcy
 
 ```
-GET /oscar_pl/_search
+GET /culturaX_pl/_search
 {
   "query": { "match": { "text_syn": "IV" } },
   "highlight": { "fields": { "text_syn": {} } }
@@ -179,7 +179,7 @@ powinno zwrócić dokument z *„kwietniu”* (synonimy: IV ↔ kwiecień)
 ### 6.2. Lematyzacja (fleksja rzeczowników)
 
 ```
-GET /oscar_pl/_search
+GET /culturaX_pl/_search
 {
   "query": { "match": { "text_lem": "pies" } },
   "highlight": { "fields": { "text_lem": {} } }
@@ -193,7 +193,7 @@ powinno znaleźć „psu”, „psy”, „człowieka” — dzięki filtrowi `m
 ### 6.3. Fleksja nazwiska „Dąbrówka”
 
 ```
-GET /oscar_pl/_search
+GET /culturaX_pl/_search
 {
   "query": { "match": { "text_lem": "Dąbrówka" } },
   "highlight": { "fields": { "text_lem": {} } }
@@ -207,7 +207,7 @@ zwróci wszystkie formy: „Dąbrówki”, „Dąbrówkę”, „Dąbrówką” 
 ### 6.4. Fuzziness (literówki)
 
 ```
-GET /oscar_pl/_search
+GET /cultraX_pl/_search
 {
   "query": {
     "match": {
@@ -225,7 +225,7 @@ znajdzie dokument z *„kwietniu”* mimo braku ogonka.
 ### 6.5. Podgląd tokenów (API `_analyze`)
 
 ```
-GET /oscar_pl/_analyze
+GET /culturaX_pl/_analyze
 {
   "analyzer": "pl_syn_lemma",
   "text": "Profesor Dąbrówki analizował dane w kwietniu."
@@ -250,7 +250,7 @@ Zobaczysz tokeny po lematyzacji i zamianie synonimów.
 
 ## 8. Zadania do wykonania
 
-1. Zbuduj drugi indeks `oscar_basic` bez pluginu Morfologik i porównaj wyniki zapytań dla słowa „człowiek” oraz nazwisko występujące w korpusie na wzór „Dąbrówka”.
+1. Zbuduj drugi indeks `culturaX_basic` bez pluginu Morfologik i porównaj wyniki zapytań dla słowa „człowiek” oraz nazwisko występujące w korpusie na wzór „Dąbrówka”.
 2. Użyj `_termvectors`, by porównać liczbę tokenów w obu wersjach indeksu.
 3. Zmierz liczbę trafień dla:
    - `match: "człowiek"`
@@ -274,8 +274,8 @@ Zobaczysz tokeny po lematyzacji i zamianie synonimów.
 
 ## 10. Zadania do raportu (8-10)
 
-1. Załaduj 10 000 zdań z korpusu OSCAR-PL.
-2. Zbuduj indeks `oscar_morfologik` z pełnym analizatorem (jak wyżej).
+1. Załaduj 10 000 zdań z korpusu CulturaX.
+2. Zbuduj indeks `culturaX_morfologik` z pełnym analizatorem (jak wyżej).
 3. Przeprowadź zapytania dla grup semantycznych:
    - *człowiek/ludzie/ludzkość*
    - *pies/psu/psami*

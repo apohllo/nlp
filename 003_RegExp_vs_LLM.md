@@ -5,13 +5,13 @@
 
 ## Źródło danych
 
-**Korpus:** [Hugging Face – oscar-corpus/OSCAR-2301](https://huggingface.co/datasets/oscar-corpus/OSCAR-2301)  
+**Korpus:** https://huggingface.co/datasets/uonlp/CulturaX
 
 **Split:** `pl`  
 
 **Licencja:** MIT-like / CC (sprawdź kartę datasetu).
 
-OSCAR to surowy web-crawl z polskiego internetu.  
+Tu można poczytać o korpusie: https://arxiv.org/abs/2309.09400
 
 Zawiera spam, HTML i treści obcojęzyczne.  
 
@@ -52,7 +52,7 @@ co robi każda z tych bibliotek i dlaczego są potrzebne w laboratorium:
 
 Użycie w laboratorium:
 
-- wczytanie korpusu OSCAR-PL (`load_dataset("oscar-corpus/OSCAR-2301", "pl")`),
+- wczytanie korpusu CulturaX  (load_dataset("uonlp/CulturaX",  "pl", use_auth_token=True)
 - filtrowanie, losowanie i iteracja po tekstach,
 - eksport danych po czyszczeniu.
 
@@ -92,23 +92,24 @@ Użycie w laboratorium:
 
 
 
-## 2. Korpus OSCAR-PL
+## 2. Korpus CulturaX
 
 ### 2.1. Pobranie i próbka
 
 ```
 from datasets import load_dataset
-ds = load_dataset("oscar-corpus/OSCAR-2301", "pl", split="train")
-ds_small = ds.shuffle(seed=42).select(range(50_000))
+ds = load_dataset("uonlp/CulturaX",
+                  "pl",
+                  use_auth_token=True)
 ```
 
-Zawsze warto próbkować pobrany korpus, żeby lepiej dostosować warsztat do pracy z danymi. Kiedy zobaczymy fragment Oscara, dojdziemy do wniosku, że dane wymagają oczyszczenia.
+Zawsze warto próbkować pobrany korpus, żeby lepiej dostosować warsztat do pracy z danymi. Kiedy zobaczymy fragment korpusu, możemy dojść do wniosku, że dane wymagają oczyszczenia.
 
 
 
 ### 2.2. Czyszczenie
 
-OSCAR to dane z sieci i jako takie dane te wymagają filtracji. Czyszczenie danych to indywidualna kwestia zależąca od wnikliwego wglądu w dane, spostrzegawczości, determinacji i wychwycenia wzorców, dlatego będzie podlegała ona ocenie. Opisz w sprawozdaniu, jak czyściłeś / czyściłaś dane i dlaczego ten sposób jest Twoim zdaniem najlepszy.
+CulturaX to dane z sieci i jako takie dane te mogą wymagać filtracji. Czyszczenie danych to indywidualna kwestia zależąca od wnikliwego wglądu w dane, spostrzegawczości, determinacji i wychwycenia wzorców, dlatego będzie podlegała ona ocenie. Opisz w sprawozdaniu, jak czyściłeś / czyściłaś dane i dlaczego ten sposób jest Twoim zdaniem najlepszy.
 
 
 
