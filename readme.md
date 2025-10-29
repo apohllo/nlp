@@ -1,10 +1,13 @@
-To get started, set your OPENAI_API_KEY environment variable, or other required keys for the providers you selected.
+# Kurs - przetwarzanie języka naturalnego
 
-Next, edit promptfooconfig.yaml.
+Treść zadań na zajęcia
 
-Then run:
-```
-promptfoo eval
-```
+1. [Narzędzia do LLMów](001_ollama_LMstudio.md)
+2. [Promptowanie LLMów](002_ollama_promptowanie.ipynb)
+3. [Wyrażenia regularne](003_RegExp_vs_LLM.md)
 
-Afterwards, you can view the results by running `promptfoo view`
+# Kadra
+
+* Aleksander Smywiński-Pohl, PhD,
+* Magda Król,
+* Bartosz Minch, PhD.
