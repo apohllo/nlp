@@ -1,0 +1,23 @@
+﻿prompts:
+  - |
+    <ROLE>Jesteś klasyfikatorem sentymentu. Wynik w JSON {"wydźwięk": "..."}</ROLE>
+    <TEXT>{{input}}</TEXT>
+    <OUTPUT>
+
+providers:
+  - id: ollama:gemma2:2b     # model w ID → PromptFoo na pewno wyśle 'model="gemma2:2b"'
+    config:
+      baseUrl: http://127.0.0.1:11434   # wymuś IPv4
+
+tests:
+  - vars: { input: "To był wspaniały dzień!" }
+    assertions:
+      - type: not-empty
+      - type: contains
+        value: "pozytywny"
+
+  - vars: { input: "Nie znoszę poniedziałków." }
+    assertions:
+      - type: not-empty
+      - type: contains
+        value: "negatywny"
