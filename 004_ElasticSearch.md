@@ -32,7 +32,7 @@ Utwórz plik `Dockerfile`:
 ```
 FROM docker.elastic.co/elasticsearch/elasticsearch:8.19.4
 RUN elasticsearch-plugin install --batch \
-  pl.allegro.tech.elasticsearch.plugin:elasticsearch-analysis-morfologik:8.19.3
+  pl.allegro.tech.elasticsearch.plugin:elasticsearch-analysis-morfologik:8.19.4
 ENV discovery.type=single-node
 ENV xpack.security.enabled=false
 ```
@@ -82,7 +82,7 @@ docker compose up -d --build
 Po uruchomieniu:
 
 ```
-curl -s localhost:9200/_cat/plugins?v
+curl -s 'localhost:9200/_cat/plugins?v'
 ```
 
 Oczekiwany wynik: w kolumnie `component` pojawi się `analysis-morfologik`.
