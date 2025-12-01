@@ -32,7 +32,7 @@ Utwórz plik `Dockerfile`:
 ```
 FROM docker.elastic.co/elasticsearch/elasticsearch:8.19.4
 RUN elasticsearch-plugin install --batch \
-  pl.allegro.tech.elasticsearch.plugin:elasticsearch-analysis-morfologik:8.19.3
+  pl.allegro.tech.elasticsearch.plugin:elasticsearch-analysis-morfologik:8.19.4
 ENV discovery.type=single-node
 ENV xpack.security.enabled=false
 ```
@@ -82,7 +82,7 @@ docker compose up -d --build
 Po uruchomieniu:
 
 ```
-curl -s localhost:9200/_cat/plugins?v
+curl -s 'localhost:9200/_cat/plugins?v'
 ```
 
 Oczekiwany wynik: w kolumnie `component` pojawi się `analysis-morfologik`.
@@ -92,7 +92,7 @@ Oczekiwany wynik: w kolumnie `component` pojawi się `analysis-morfologik`.
 ## 4. Tworzymy indeks i analizatory dla języka polskiego
 
 ```
-PUT /culturaX_pl
+PUT /culturax_pl
 {
   "settings": {
     "analysis": {
@@ -143,7 +143,7 @@ PUT /culturaX_pl
 ## 5. Wczytanie danych testowych
 
 ```
-POST /culturaX_pl/_bulk
+POST /culturax_pl/_bulk
 { "index": {} }
 { "text_syn": "W kwietniu 2025 w Warszawie odbyła się konferencja AI.", "text_lem": "W kwietniu 2025 w Warszawie odbyła się konferencja AI.", "date": "2025-04-12" }
 { "index": {} }
@@ -165,7 +165,7 @@ POST /culturaX_pl/_bulk
 ### 6.1. Synonimy miesięcy
 
 ```
-GET /culturaX_pl/_search
+GET /culturax_pl/_search
 {
   "query": { "match": { "text_syn": "IV" } },
   "highlight": { "fields": { "text_syn": {} } }
@@ -179,7 +179,7 @@ powinno zwrócić dokument z *„kwietniu”* (synonimy: IV ↔ kwiecień)
 ### 6.2. Lematyzacja (fleksja rzeczowników)
 
 ```
-GET /culturaX_pl/_search
+GET /culturax_pl/_search
 {
   "query": { "match": { "text_lem": "pies" } },
   "highlight": { "fields": { "text_lem": {} } }
@@ -193,7 +193,7 @@ powinno znaleźć „psu”, „psy”, „człowieka” — dzięki filtrowi `m
 ### 6.3. Fleksja nazwiska „Dąbrówka”
 
 ```
-GET /culturaX_pl/_search
+GET /culturax_pl/_search
 {
   "query": { "match": { "text_lem": "Dąbrówka" } },
   "highlight": { "fields": { "text_lem": {} } }
@@ -225,7 +225,7 @@ znajdzie dokument z *„kwietniu”* mimo braku ogonka.
 ### 6.5. Podgląd tokenów (API `_analyze`)
 
 ```
-GET /culturaX_pl/_analyze
+GET /culturax_pl/_analyze
 {
   "analyzer": "pl_syn_lemma",
   "text": "Profesor Dąbrówki analizował dane w kwietniu."
