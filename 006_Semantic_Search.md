@@ -365,7 +365,7 @@ Dla każdego zapytania:
 
 1. Czy któryś silnik:
    - lepiej radzi sobie z krótkimi hasłami?
-   - lepiej z wielozdniowymi, długimi pytaniami?
+   - lepiej z wielozdaniowymi, długimi pytaniami?
 2. Czy w którymś wypadku widać wpływ:
    - HNSW / `num_candidates`,
    - ograniczeń pamięciowych?
